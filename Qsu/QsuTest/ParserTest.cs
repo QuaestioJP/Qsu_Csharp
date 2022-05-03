@@ -14,13 +14,16 @@ namespace QsuTest
         [TestMethod]
         public void TestLetStatement1()
         {
-            var input = @"let x = 5;
+            var input = 
+@"
+let x = 5;
 let y = 10;
 let xyz = 838383;";
 
             var lexer = new Lexer(input);
             var parser = new Parser(lexer);
             var root = parser.ParseProgram();
+            _CheckParserErrors(parser);
 
             Assert.AreEqual(
                 root.Statements.Count, 3,
@@ -58,6 +61,13 @@ let xyz = 838383;";
                 $"識別子のリテラルが間違っています。"
             );
 
+        }
+
+        private void _CheckParserErrors(Parser parser)
+        {
+            if (parser.Errors.Count == 0) return;
+            var message = "\n" + string.Join("\n", parser.Errors);
+            Assert.Fail(message);
         }
     }
 }

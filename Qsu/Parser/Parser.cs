@@ -12,6 +12,7 @@ namespace Qsu.Parsing
         public Token CurrentToken;
         public Token NextToken;
         public Lexer Lexer { get; }
+        public List<string> Errors = new List<string>();
 
         public Parser(Lexer lexer)
         {
@@ -93,7 +94,13 @@ namespace Qsu.Parsing
                 return true;
             }
 
+            AddNextTokenError(type, NextToken.Type);
             return false;
+        }
+
+        private void AddNextTokenError(TokenType expected,TokenType actual)
+        {
+            Errors.Add($"{actual.ToString()} ではなく {expected.ToString()} が来なければなりません。");
         }
     }
 }
