@@ -1661,6 +1661,19 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "AST/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Lexer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AST.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AST.dll": {}
+        }
+      },
       "Lexer/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -1669,6 +1682,20 @@
         },
         "runtime": {
           "bin/placeholder/Lexer.dll": {}
+        }
+      },
+      "Parser/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "AST": "1.0.0",
+          "Lexer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Parser.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Parser.dll": {}
         }
       },
       "Qsu/1.0.0": {
@@ -6127,10 +6154,20 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "AST/1.0.0": {
+      "type": "project",
+      "path": "../AST/AST.csproj",
+      "msbuildProject": "../AST/AST.csproj"
+    },
     "Lexer/1.0.0": {
       "type": "project",
       "path": "../Lexer/Lexer.csproj",
       "msbuildProject": "../Lexer/Lexer.csproj"
+    },
+    "Parser/1.0.0": {
+      "type": "project",
+      "path": "../Parser/Parser.csproj",
+      "msbuildProject": "../Parser/Parser.csproj"
     },
     "Qsu/1.0.0": {
       "type": "project",
@@ -6140,10 +6177,12 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "AST >= 1.0.0",
       "Lexer >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.3",
       "MSTest.TestFramework >= 2.2.3",
       "Microsoft.NET.Test.Sdk >= 16.9.4",
+      "Parser >= 1.0.0",
       "Qsu >= 1.0.0",
       "coverlet.collector >= 3.0.2"
     ]
@@ -6183,8 +6222,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\AST\\AST.csproj": {
+              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\AST\\AST.csproj"
+            },
             "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {
               "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj"
+            },
+            "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj": {
+              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj"
             },
             "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Qsu\\Qsu.csproj": {
               "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Qsu\\Qsu.csproj"

@@ -1,0 +1,15 @@
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\bin\Debug\netstandard2.1\Parser.deps.json
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\bin\Debug\netstandard2.1\Parser.dll
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\bin\Debug\netstandard2.1\Parser.pdb
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\bin\Debug\netstandard2.1\AST.dll
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\bin\Debug\netstandard2.1\Lexer.dll
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\bin\Debug\netstandard2.1\AST.pdb
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\bin\Debug\netstandard2.1\Lexer.pdb
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\obj\Debug\netstandard2.1\Parser.csproj.AssemblyReference.cache
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\obj\Debug\netstandard2.1\Parser.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\obj\Debug\netstandard2.1\Parser.AssemblyInfoInputs.cache
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\obj\Debug\netstandard2.1\Parser.AssemblyInfo.cs
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\obj\Debug\netstandard2.1\Parser.csproj.CoreCompileInputs.cache
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\obj\Debug\netstandard2.1\Parser.csproj.CopyComplete
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\obj\Debug\netstandard2.1\Parser.dll
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Parser\obj\Debug\netstandard2.1\Parser.pdb

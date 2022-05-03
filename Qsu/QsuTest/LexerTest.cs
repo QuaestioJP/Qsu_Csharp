@@ -6,7 +6,7 @@ using Qsu.Lexing;
 namespace QsuTest
 {
     [TestClass]
-    public class UnitTest1
+    public class LexerTest
     {
         [TestMethod]
         public void LexerTest1()
