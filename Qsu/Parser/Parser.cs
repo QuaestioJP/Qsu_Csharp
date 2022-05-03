@@ -37,6 +37,25 @@ namespace Qsu.Parsing
         {
             PrefixParseFns = new Dictionary<TokenType, PrefixParseFn>();
             PrefixParseFns.Add(TokenType.IDENT, ParseIdentifier);
+            PrefixParseFns.Add(TokenType.INT, ParseIntegerLiteral);
+        }
+
+        public IExpression ParseIntegerLiteral()
+        {
+            //リテラルを整数値に変換
+            if (int.TryParse(CurrentToken.Literal, out int result))
+            {
+                return new IntegerLiteral()
+                {
+                    Token = CurrentToken,
+                    Value = result,
+                };
+            }
+
+            //型変換失敗時
+            var message = $"{this.CurrentToken.Literal} を integer に変換できません。";
+            Errors.Add(message);
+            return null;
         }
 
         public IExpression ParseIdentifier()
