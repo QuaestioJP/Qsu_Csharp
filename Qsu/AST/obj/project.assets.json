@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETStandard,Version=v2.1": {}
+    ".NETStandard,Version=v2.1": {
+      "Lexer/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Lexer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Lexer.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Lexer/1.0.0": {
+      "type": "project",
+      "path": "../Lexer/Lexer.csproj",
+      "msbuildProject": "../Lexer/Lexer.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETStandard,Version=v2.1": []
+    ".NETStandard,Version=v2.1": [
+      "Lexer >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\KurisuJuha\\.nuget\\packages\\": {},
@@ -41,7 +60,11 @@
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {
+              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
