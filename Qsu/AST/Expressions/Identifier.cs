@@ -16,6 +16,8 @@ namespace Qsu.AST.Expressions
             Value = value;
         }
 
-        public string TokenLiteral() => Token.Literal;
+        public string TokenLiteral() => Token?.Literal ?? "";
+
+        public string ToCode() => Value;
     }
 }

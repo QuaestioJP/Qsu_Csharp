@@ -13,5 +13,15 @@ namespace Qsu.AST
         {
             return Statements.FirstOrDefault()?.TokenLiteral() ?? "";
         }
+        public string ToCode()
+        {
+            var builder = new StringBuilder();
+            foreach (var ast in Statements)
+            {
+                builder.AppendLine(ast.ToCode());
+            }
+
+            return builder.ToString().TrimEnd();
+        }
     }
 }

@@ -5,5 +5,6 @@ namespace Qsu.AST
     public interface INode
     {
         string TokenLiteral();
+        string ToCode();
     }
 }
