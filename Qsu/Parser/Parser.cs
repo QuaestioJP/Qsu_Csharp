@@ -7,12 +7,19 @@ using Qsu.AST.Statements;
 
 namespace Qsu.Parsing
 {
+    using PrefixParseFn = Func<IExpression>;
+    using InfixParseFn = Func<IExpression, IExpression>;
+
     public class Parser
     {
         public Token CurrentToken;
         public Token NextToken;
         public Lexer Lexer { get; }
         public List<string> Errors = new List<string>();
+
+        public Dictionary<TokenType, PrefixParseFn> PrefixParseFns;
+        public Dictionary<TokenType, InfixParseFn> InfixParseFns;
+
 
         public Parser(Lexer lexer)
         {
@@ -21,6 +28,20 @@ namespace Qsu.Parsing
             //トークンを二つセット
             CurrentToken = Lexer.NextToken();
             NextToken = Lexer.NextToken();
+
+            //トークンの種類と解析関数を関連付ける
+            RegisterPrefixParseFns();
+        }
+
+        private void RegisterPrefixParseFns()
+        {
+            PrefixParseFns = new Dictionary<TokenType, PrefixParseFn>();
+            PrefixParseFns.Add(TokenType.IDENT, ParseIdentifier);
+        }
+
+        public IExpression ParseIdentifier()
+        {
+            return new Identifier(CurrentToken, CurrentToken.Literal);
         }
 
         private void ReadToken()
@@ -61,7 +82,7 @@ namespace Qsu.Parsing
                 case TokenType.RETURN:
                     return ParseReturnStatement();
                 default:
-                    return null;
+                    return ParseExpressionStatement();
             }
         }
 
@@ -71,6 +92,7 @@ namespace Qsu.Parsing
             statement.Token = CurrentToken;
             ReadToken();
 
+            // TODO: 後で実装いたします。
             while (CurrentToken.Type != TokenType.SEMICOLON)
             {
                 ReadToken();
@@ -92,6 +114,7 @@ namespace Qsu.Parsing
             //等号
             if (!ExpectPeek(TokenType.ASSIGN)) return null;
 
+            // TODO: 後で実装いたします。
             //式
             while (CurrentToken.Type != TokenType.SEMICOLON)
             {
@@ -117,6 +140,39 @@ namespace Qsu.Parsing
         private void AddNextTokenError(TokenType expected,TokenType actual)
         {
             Errors.Add($"{actual.ToString()} ではなく {expected.ToString()} が来なければなりません。");
+        }
+
+        public IExpression ParseExpression(Precedence precedence)
+        {
+            PrefixParseFns.TryGetValue(CurrentToken.Type, out var prefix);
+            if (prefix == null) return null;
+
+            IExpression leftExpression = prefix();
+            return leftExpression;
+        }
+
+        public ExpressionStatement ParseExpressionStatement()
+        {
+            ExpressionStatement statement = new ExpressionStatement();
+            statement.Token = CurrentToken;
+
+            statement.Expression = ParseExpression(Precedence.LOWEST);
+
+            //セミコロンをぶっ飛ばす
+            if (NextToken.Type == TokenType.SEMICOLON) ReadToken();
+
+            return statement;
+        }
+
+        public enum Precedence
+        {
+            LOWEST = 1,
+            EQUALS,         // ==
+            LESSGREATER,    // >, <
+            SUM,            // +
+            PRODUCT,        // *
+            PREFIX,         // -x, !x
+            CALL            // myFunction(x)
         }
     }
 }
