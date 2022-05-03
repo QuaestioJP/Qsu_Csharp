@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "geqBiIXAyyHJGHEO+SEvwsA5PDuqwL6n7doHOqN+zNCmmSFjXqIvOYKtKUqJ4Do45dwmolit9Pi114X3F5bUFA==",
+  "dgSpecHash": "VNzQU+c+IrlEEa4rjad4xYtuSkHdHmQN3MzfeO51XAXZUGYYA+KuI6RCtpoCGKRGd2R00nWL9Ok+Xu7TnKtL1w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\KurisuJuha\\source\\repos\\Qsu\\QsuTest\\QsuTest.csproj",
+  "projectFilePath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\QsuTest\\QsuTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KurisuJuha\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\KurisuJuha\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
