@@ -16,9 +16,9 @@ namespace QsuTest
         {
             var input = 
 @"
-let x = 5;
-let y = 10;
-let xyz = 838383;";
+return 5;
+return 10;
+return = 993322;";
 
             var lexer = new Lexer(input);
             var parser = new Parser(lexer);
@@ -30,12 +30,18 @@ let xyz = 838383;";
                 "Root.Statementsの数が間違っています。"
             );
 
-            var tests = new string[] { "x", "y", "xyz" };
-            for (int i = 0; i < tests.Length; i++)
+            foreach (var statement in root.Statements)
             {
-                var name = tests[i];
-                var statement = root.Statements[i];
-                this._TestLetStatement(statement, name);
+                var returnStatement = statement as ReturnStatement;
+                if (returnStatement == null)
+                {
+                    Assert.Fail("statement が ReturnStatement ではありません。");
+                }
+
+                Assert.AreEqual(
+                    returnStatement.TokenLiteral(), "return",
+                    $"return のリテラルが間違っています。"
+                );
             }
         }
         private void _TestLetStatement(IStatement statement, string name)

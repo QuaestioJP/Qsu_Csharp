@@ -58,9 +58,25 @@ namespace Qsu.Parsing
             {
                 case TokenType.LET:
                     return ParseLetStatement();
+                case TokenType.RETURN:
+                    return ParseReturnStatement();
                 default:
                     return null;
             }
+        }
+
+        public ReturnStatement ParseReturnStatement()
+        {
+            var statement = new ReturnStatement();
+            statement.Token = CurrentToken;
+            ReadToken();
+
+            while (CurrentToken.Type != TokenType.SEMICOLON)
+            {
+                ReadToken();
+            }
+
+            return statement;
         }
 
         public LetStatement ParseLetStatement()
