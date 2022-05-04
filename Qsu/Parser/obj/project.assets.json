@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
+      "AST/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Lexer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AST.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AST.dll": {}
+        }
+      },
       "Lexer/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "AST/1.0.0": {
+      "type": "project",
+      "path": "../AST/AST.csproj",
+      "msbuildProject": "../AST/AST.csproj"
+    },
     "Lexer/1.0.0": {
       "type": "project",
       "path": "../Lexer/Lexer.csproj",
@@ -23,6 +41,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
+      "AST >= 1.0.0",
       "Lexer >= 1.0.0"
     ]
   },
@@ -61,6 +80,9 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
+            "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\AST\\AST.csproj": {
+              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\AST\\AST.csproj"
+            },
             "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {
               "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj"
             }

@@ -1,0 +1,51 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "Parser/1.0.0": {
+        "dependencies": {
+          "AST": "1.0.0",
+          "Lexer": "1.0.0"
+        },
+        "runtime": {
+          "Parser.dll": {}
+        }
+      },
+      "AST/1.0.0": {
+        "dependencies": {
+          "Lexer": "1.0.0"
+        },
+        "runtime": {
+          "AST.dll": {}
+        }
+      },
+      "Lexer/1.0.0": {
+        "runtime": {
+          "Lexer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Parser/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AST/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Lexer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
