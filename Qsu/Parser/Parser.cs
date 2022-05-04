@@ -11,6 +11,7 @@ namespace Qsu.Parsing
         public Token CurrentToken;
         public Token NextToken;
         public Lexer Lexer;
+
         
         public Parser(Lexer lexer)
         {
@@ -20,12 +21,19 @@ namespace Qsu.Parsing
             NextToken = Lexer.NextToken();
         }
 
+        /// <summary>
+        /// トークンを次のトークンに進めます
+        /// </summary>
         public void ReadToken()
         {
             CurrentToken = NextToken;
             NextToken = Lexer.NextToken();
         }
 
+        /// <summary>
+        /// プログラム全体をパースします
+        /// </summary>
+        /// <returns></returns>
         public Root ParseRoot()
         {
             Root root = new Root();
@@ -74,6 +82,8 @@ namespace Qsu.Parsing
                 this.ReadToken();
                 return true;
             }
+
+            AddNextTokenError(type, NextToken.Type);
             return false;
         }
     }
