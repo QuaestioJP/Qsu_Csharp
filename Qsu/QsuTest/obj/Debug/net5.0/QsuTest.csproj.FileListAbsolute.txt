@@ -1,9 +1,5 @@
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\CoverletSourceRootsMapping
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\testhost.dll
-C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\Qsu.deps.json
-C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\Qsu.runtimeconfig.json
-C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\Qsu.runtimeconfig.dev.json
-C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\Qsu.exe
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\testhost.exe
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
@@ -95,11 +91,9 @@ C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\zh-Hant\Mi
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\AST.dll
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\Lexer.dll
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\Parser.dll
-C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\Qsu.dll
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\AST.pdb
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\Lexer.pdb
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\Parser.pdb
-C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\bin\Debug\net5.0\Qsu.pdb
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\obj\Debug\net5.0\QsuTest.csproj.AssemblyReference.cache
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\obj\Debug\net5.0\QsuTest.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\QsuTest\obj\Debug\net5.0\QsuTest.AssemblyInfoInputs.cache

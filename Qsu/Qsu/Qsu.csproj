@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AST\AST.csproj" />
     <ProjectReference Include="..\Lexer\Lexer.csproj" />
+    <ProjectReference Include="..\Parser\Parser.csproj" />
   </ItemGroup>
 
 </Project>

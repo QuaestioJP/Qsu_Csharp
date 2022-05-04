@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "AST/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Lexer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AST.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AST.dll": {}
+        }
+      },
       "Lexer/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -11,19 +24,45 @@
         "runtime": {
           "bin/placeholder/Lexer.dll": {}
         }
+      },
+      "Parser/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "AST": "1.0.0",
+          "Lexer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Parser.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Parser.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "AST/1.0.0": {
+      "type": "project",
+      "path": "../AST/AST.csproj",
+      "msbuildProject": "../AST/AST.csproj"
+    },
     "Lexer/1.0.0": {
       "type": "project",
       "path": "../Lexer/Lexer.csproj",
       "msbuildProject": "../Lexer/Lexer.csproj"
+    },
+    "Parser/1.0.0": {
+      "type": "project",
+      "path": "../Parser/Parser.csproj",
+      "msbuildProject": "../Parser/Parser.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Lexer >= 1.0.0"
+      "AST >= 1.0.0",
+      "Lexer >= 1.0.0",
+      "Parser >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -61,8 +100,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\AST\\AST.csproj": {
+              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\AST\\AST.csproj"
+            },
             "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {
               "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj"
+            },
+            "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj": {
+              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj"
             }
           }
         }

@@ -21,5 +21,14 @@ namespace Qsu.AST.Expressions
             Token = token;
             Value = value;
         }
+
+        public string ToJSON()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append($"\"{Value}\"");
+
+            return builder.ToString();
+        }
     }
 }

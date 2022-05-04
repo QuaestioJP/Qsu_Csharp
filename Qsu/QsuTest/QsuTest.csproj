@@ -17,7 +17,6 @@
     <ProjectReference Include="..\AST\AST.csproj" />
     <ProjectReference Include="..\Lexer\Lexer.csproj" />
     <ProjectReference Include="..\Parser\Parser.csproj" />
-    <ProjectReference Include="..\Qsu\Qsu.csproj" />
   </ItemGroup>
 
 </Project>

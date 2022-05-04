@@ -1697,19 +1697,6 @@
         "runtime": {
           "bin/placeholder/Parser.dll": {}
         }
-      },
-      "Qsu/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "Lexer": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Qsu.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Qsu.dll": {}
-        }
       }
     }
   },
@@ -6168,11 +6155,6 @@
       "type": "project",
       "path": "../Parser/Parser.csproj",
       "msbuildProject": "../Parser/Parser.csproj"
-    },
-    "Qsu/1.0.0": {
-      "type": "project",
-      "path": "../Qsu/Qsu.csproj",
-      "msbuildProject": "../Qsu/Qsu.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6183,7 +6165,6 @@
       "MSTest.TestFramework >= 2.2.3",
       "Microsoft.NET.Test.Sdk >= 16.9.4",
       "Parser >= 1.0.0",
-      "Qsu >= 1.0.0",
       "coverlet.collector >= 3.0.2"
     ]
   },
@@ -6230,9 +6211,6 @@
             },
             "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj": {
               "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj"
-            },
-            "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Qsu\\Qsu.csproj": {
-              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Qsu\\Qsu.csproj"
             }
           }
         }

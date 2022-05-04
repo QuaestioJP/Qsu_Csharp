@@ -9,7 +9,7 @@ namespace Qsu.AST
     /// </summary>
     public interface INode
     {
-
+        public string ToJSON();
     }
 
     /// <summary>

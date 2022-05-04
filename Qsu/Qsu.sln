@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Qsu", "Qsu\Qsu.csproj", "{A9CBFCEA-FA38-421D-8CE2-C8AFE99E5C2E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lexer", "Lexer\Lexer.csproj", "{D082FC3A-EE67-4D13-9D03-CB51D3FEC9E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "Parser\Parser.csproj", "{AECB9F1A-CADC-4CCC-ADE9-7B6F2B21E5C8}"
@@ -13,16 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AST", "AST\AST.csproj", "{A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QsuTest", "QsuTest\QsuTest.csproj", "{DB3B170E-F24F-40BF-A4A1-4FFD34D311FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qsu", "Qsu\Qsu.csproj", "{D3EA59E5-CC3C-44A9-A907-3675B810E2E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A9CBFCEA-FA38-421D-8CE2-C8AFE99E5C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9CBFCEA-FA38-421D-8CE2-C8AFE99E5C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9CBFCEA-FA38-421D-8CE2-C8AFE99E5C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9CBFCEA-FA38-421D-8CE2-C8AFE99E5C2E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D082FC3A-EE67-4D13-9D03-CB51D3FEC9E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D082FC3A-EE67-4D13-9D03-CB51D3FEC9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D082FC3A-EE67-4D13-9D03-CB51D3FEC9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{DB3B170E-F24F-40BF-A4A1-4FFD34D311FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB3B170E-F24F-40BF-A4A1-4FFD34D311FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB3B170E-F24F-40BF-A4A1-4FFD34D311FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3EA59E5-CC3C-44A9-A907-3675B810E2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3EA59E5-CC3C-44A9-A907-3675B810E2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3EA59E5-CC3C-44A9-A907-3675B810E2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3EA59E5-CC3C-44A9-A907-3675B810E2E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

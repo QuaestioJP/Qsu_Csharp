@@ -14,7 +14,6 @@
           "MSTest.TestFramework": "2.2.3",
           "Microsoft.NET.Test.Sdk": "16.9.4",
           "Parser": "1.0.0",
-          "Qsu": "1.0.0",
           "coverlet.collector": "3.0.2"
         },
         "runtime": {
@@ -1101,14 +1100,6 @@
         "runtime": {
           "Parser.dll": {}
         }
-      },
-      "Qsu/1.0.0": {
-        "dependencies": {
-          "Lexer": "1.0.0"
-        },
-        "runtime": {
-          "Qsu.dll": {}
-        }
       }
     }
   },
@@ -1745,11 +1736,6 @@
       "sha512": ""
     },
     "Parser/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Qsu/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
