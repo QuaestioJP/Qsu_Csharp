@@ -114,7 +114,7 @@ namespace Qsu.Parsing
             //ifの条件式を読む
             expression.Condition = ParseExpression(Precedence.LOWEST);
 
-            //){をぶっ飛ばす
+            //){がないならエラーにする
             if (!ExpectPeek(TokenType.RPAREN)) return null;
             if (!ExpectPeek(TokenType.LBRACE)) return null;
 
