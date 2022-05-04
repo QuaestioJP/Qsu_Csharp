@@ -1,7 +1,20 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
+    ".NETStandard,Version=v2.1": {
+      "AST/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Lexer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AST.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AST.dll": {}
+        }
+      },
       "Lexer/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "AST/1.0.0": {
+      "type": "project",
+      "path": "../AST/AST.csproj",
+      "msbuildProject": "../AST/AST.csproj"
+    },
     "Lexer/1.0.0": {
       "type": "project",
       "path": "../Lexer/Lexer.csproj",
@@ -22,7 +40,8 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0": [
+    ".NETStandard,Version=v2.1": [
+      "AST >= 1.0.0",
       "Lexer >= 1.0.0"
     ]
   },
@@ -34,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Qsu\\Qsu.csproj",
-      "projectName": "Qsu",
-      "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Qsu\\Qsu.csproj",
+      "projectUniqueName": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj",
+      "projectName": "Parser",
+      "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj",
       "packagesPath": "C:\\Users\\KurisuJuha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Qsu\\obj\\",
+      "outputPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -51,16 +70,19 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "netstandard2.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "projectReferences": {
+            "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\AST\\AST.csproj": {
+              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\AST\\AST.csproj"
+            },
             "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {
               "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj"
             }
@@ -74,8 +96,8 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
         "imports": [
           "net461",
           "net462",
@@ -87,7 +109,7 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.NETCore.App": {
+          "NETStandard.Library": {
             "privateAssets": "all"
           }
         },
