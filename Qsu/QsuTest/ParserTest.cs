@@ -432,6 +432,109 @@ return = 993322;";
             }
         }
 
+        [TestMethod]
+        public void TestIfExpression()
+        {
+            var input = "if (x < y) { x }";
+            var lexer = new Lexer(input);
+            var parser = new Parser(lexer);
+            var root = parser.ParseProgram();
+            this._CheckParserErrors(parser);
 
+            Assert.AreEqual(
+                root.Statements.Count, 1,
+                "Root.Statementsの数が間違っています。"
+            );
+
+            var statement = root.Statements[0] as ExpressionStatement;
+            if (statement == null)
+            {
+                Assert.Fail("statement が ExpressionStatement ではありません。");
+            }
+
+            var expression = statement.Expression as IfExpression;
+            if (expression == null)
+            {
+                Assert.Fail("expression が IfExpression ではありません。");
+            }
+
+            this._TestInfixExpression(expression.Condition, "x", "<", "y");
+
+            if (((BlockExpression)expression.Consequence).Statements.Count != 1)
+            {
+                Assert.Fail("Consequence の 文の数が 1 ではありません。");
+            }
+
+            var consequence = ((BlockExpression)expression.Consequence).Statements[0] as ExpressionStatement;
+            if (consequence == null)
+            {
+                Assert.Fail("consequence が ExpressionStatement ではありません。");
+            }
+
+            this._TestIdentifier(consequence.Expression, "x");
+
+            if (expression.Alternative != null)
+            {
+                Assert.Fail("expression.Alternative が null ではありません。");
+            }
+        }
+
+        [TestMethod]
+        public void TestIfElseExpression()
+        {
+            var input = "if (x < y) { x } else { y; }";
+            var lexer = new Lexer(input);
+            var parser = new Parser(lexer);
+            var root = parser.ParseProgram();
+            this._CheckParserErrors(parser);
+
+            Assert.AreEqual(
+                root.Statements.Count, 1,
+                "Root.Statementsの数が間違っています。"
+            );
+
+            var statement = root.Statements[0] as ExpressionStatement;
+            if (statement == null)
+            {
+                Assert.Fail("statement が ExpressionStatement ではありません。");
+            }
+
+            var expression = statement.Expression as IfExpression;
+            if (expression == null)
+            {
+                Assert.Fail("expression が IfExpression ではありません。");
+            }
+
+            this._TestInfixExpression(expression.Condition, "x", "<", "y");
+
+            if (((BlockExpression)expression.Consequence).Statements.Count != 1)
+            {
+                Assert.Fail("Consequence の 文の数が 1 ではありません。");
+            }
+
+            var consequence = ((BlockExpression)expression.Consequence).Statements[0] as ExpressionStatement;
+            if (consequence == null)
+            {
+                Assert.Fail("consequence が ExpressionStatement ではありません。");
+            }
+            this._TestIdentifier(consequence.Expression, "x");
+
+            if (expression.Alternative == null)
+            {
+                Assert.Fail("expression.Alternative が null です。");
+            }
+
+            if (((BlockExpression)expression.Alternative).Statements.Count != 1)
+            {
+                Assert.Fail("Consequence の 文の数が 1 ではありません。");
+            }
+
+            var alternative = ((BlockExpression)expression.Alternative).Statements[0] as ExpressionStatement;
+            if (consequence == null)
+            {
+                Assert.Fail("alternative が ExpressionStatement ではありません。");
+            }
+            this._TestIdentifier(alternative.Expression, "y");
+        }
     }
 }

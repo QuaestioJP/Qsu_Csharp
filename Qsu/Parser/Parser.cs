@@ -95,6 +95,45 @@ namespace Qsu.Parsing
             PrefixParseFns.Add(TokenType.TRUE, ParseBooleanLiteral);
             PrefixParseFns.Add(TokenType.FALSE, ParseBooleanLiteral);
             PrefixParseFns.Add(TokenType.LPAREN, ParseGroupedExpression);
+            PrefixParseFns.Add(TokenType.IF,ParseIfExpression);
+        }
+
+        public IExpression ParseIfExpression()
+        {
+            IfExpression expression = new IfExpression()
+            {
+                Token = CurrentToken,
+            };
+
+            //ifのあとは(である。そう決まっているのだ
+            if (!ExpectPeek(TokenType.LPAREN)) return null;
+
+            //(をぶっ飛ばす
+            ReadToken();
+
+            //ifの条件式を読む
+            expression.Condition = ParseExpression(Precedence.LOWEST);
+
+            //){をぶっ飛ばす
+            if (!ExpectPeek(TokenType.RPAREN)) return null;
+            if (!ExpectPeek(TokenType.LBRACE)) return null;
+
+            //この時点で { が現在のトークン
+            //ブロック文の解析
+            expression.Consequence = ParseBlockExpression();
+
+            if (NextToken.Type == TokenType.ELSE)
+            {
+                // elseをぶっ飛ばす
+                ReadToken();
+                //else の後は{になる。そう決まっている。
+                if (!ExpectPeek(TokenType.LBRACE)) return null;
+
+                //この時点で { が現在のトークン
+                expression.Alternative = ParseBlockExpression();
+            }
+
+            return expression;
         }
 
         public IExpression ParseGroupedExpression()
@@ -323,6 +362,31 @@ namespace Qsu.Parsing
 
             return expression;
 
+        }
+
+        public IExpression ParseBlockExpression()
+        {
+            BlockExpression block = new BlockExpression()
+            {
+                Token = CurrentToken,
+                Statements = new List<IStatement>(),
+            };
+
+            //"{"←をパスする
+            ReadToken();
+
+            while (CurrentToken.Type != TokenType.RBRACE && CurrentToken.Type != TokenType.EOF)
+            {
+                var statement = ParseStatement();
+
+                if (statement != null)
+                {
+                    block.Statements.Add(statement);
+                }
+                ReadToken();
+            }
+
+            return block;
         }
     }
 }
