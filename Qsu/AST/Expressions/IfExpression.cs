@@ -19,8 +19,9 @@ namespace Qsu.AST.Expressions
             builder.Append(" (");
             builder.Append(Condition.ToCode());
             builder.Append(")");
-            builder.Append(" ");
+            builder.Append("{");
             builder.Append(Consequence.ToCode());
+            builder.Append("}");
 
             //elseがあるなら
             if (Alternative != null)
