@@ -267,6 +267,10 @@ return = 993322;";
         ("1 + 2; -3 * 4", "(1 + 2)\r\n((-3) * 4)"),
         ("5 > 4 == 3 < 4", "((5 > 4) == (3 < 4))"),
         ("3 + 4 * 5 == 3 * 1 + 4 * 5", "((3 + (4 * 5)) == ((3 * 1) + (4 * 5)))"),
+        ("true", "true"),
+        ("true == false", "(true == false)"),
+        ("1 > 2 == false", "((1 > 2) == false)"),
+
     };
 
             foreach (var (input, code) in tests)
@@ -280,5 +284,148 @@ return = 993322;";
                 Assert.AreEqual(code, actual);
             }
         }
+
+        private void _TestIdentifier(IExpression expression, string value)
+        {
+            var ident = expression as Identifier;
+            if (ident == null)
+            {
+                Assert.Fail("Expression が Identifier ではありません。");
+            }
+            if (ident.Value != value)
+            {
+                Assert.Fail($"ident.Value が {value} ではありません。({ident.Value})");
+            }
+            if (ident.TokenLiteral() != value)
+            {
+                Assert.Fail($"ident.TokenLiteral が {value} ではありません。({ident.TokenLiteral()})");
+            }
+        }
+
+        private void _TestLiteralExpression(IExpression expression, object expected)
+        {
+            switch (expected)
+            {
+                case int intValue:
+                    this._TestIntegerLiteral(expression, intValue);
+                    break;
+                case string stringValue:
+                    this._TestIdentifier(expression, stringValue);
+                    break;
+                case bool boolValue:
+                    _TestBooleanLiteral(expression, boolValue);
+                    break;
+                default:
+                    Assert.Fail("予期せぬ型です。");
+                    break;
+            }
+        }
+
+        private void _TestInfixExpression(IExpression expression, object left, string op, object right)
+        {
+            var infixExpression = expression as InfixExpression;
+            if (infixExpression == null)
+            {
+                Assert.Fail("expression が InfixExpression ではありません。");
+            }
+
+            this._TestLiteralExpression(infixExpression.Left, left);
+
+            if (infixExpression.Operator != op)
+            {
+                Assert.Fail($"Operator が {infixExpression.Operator} ではありません。({op})");
+            }
+
+            this._TestLiteralExpression(infixExpression.Right, right);
+        }
+
+        [TestMethod]
+        public void TestInfixExpressions2()
+        {
+            var tests = new (string, object, string, object)[] {
+        ("1 + 1;", 1, "+", 1),
+        ("1 - 1;", 1, "-", 1),
+        ("1 * 1;", 1, "*", 1),
+        ("1 / 1;", 1, "/", 1),
+        ("1 < 1;", 1, "<", 1),
+        ("1 > 1;", 1, ">", 1),
+        ("1 == 1;", 1, "==", 1),
+        ("1 != 1;", 1, "!=", 1),
+        ("true == false", true, "==", false),
+        ("false != false", false, "!=", false),
+    };
+
+            foreach (var (input, leftValue, op, rightValue) in tests)
+            {
+                var lexer = new Lexer(input);
+                var parser = new Parser(lexer);
+                var root = parser.ParseProgram();
+                this._CheckParserErrors(parser);
+
+                Assert.AreEqual(
+                    root.Statements.Count, 1,
+                    "Root.Statementsの数が間違っています。"
+                );
+
+                var statement = root.Statements[0] as ExpressionStatement;
+                if (statement == null)
+                {
+                    Assert.Fail("statement が ExpressionStatement ではありません。");
+                }
+
+                this._TestInfixExpression(statement.Expression, leftValue, op, rightValue);
+            }
+        }
+
+        [TestMethod]
+        public void TestBooleanLiteralExpression()
+        {
+            var tests = new[]
+            {
+        ("true;", true),
+        ("false;", false),
+    };
+
+            foreach (var (input, value) in tests)
+            {
+                var lexer = new Lexer(input);
+                var parser = new Parser(lexer);
+                var root = parser.ParseProgram();
+                this._CheckParserErrors(parser);
+
+                Assert.AreEqual(
+                    root.Statements.Count, 1,
+                    "Root.Statementsの数が間違っています。"
+                );
+
+                var statement = root.Statements[0] as ExpressionStatement;
+                if (statement == null)
+                {
+                    Assert.Fail("statement が ExpressionStatement ではありません。");
+                }
+
+                this._TestBooleanLiteral(statement.Expression, value);
+            }
+        }
+
+        private void _TestBooleanLiteral(IExpression expression, bool value)
+        {
+            var booleanLiteral = expression as BooleanLiteral;
+            if (booleanLiteral == null)
+            {
+                Assert.Fail("Expression が BooleanLiteral ではありません。");
+            }
+            if (booleanLiteral.Value != value)
+            {
+                Assert.Fail($"booleanLiteral.Value が {value} ではありません。({booleanLiteral.Value})");
+            }
+            // bool値をToString()すると "True", "False" になるので小文字化してます
+            if (booleanLiteral.TokenLiteral() != value.ToString().ToLower())
+            {
+                Assert.Fail($"booleanLiteral.TokenLiteral が {value.ToString().ToLower()} ではありません。({booleanLiteral.TokenLiteral()})");
+            }
+        }
+
+
     }
 }
