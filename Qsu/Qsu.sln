@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Qsu", "Qsu\Qsu.csproj", "{A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lexer", "Lexer\Lexer.csproj", "{D082FC3A-EE67-4D13-9D03-CB51D3FEC9E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "Parser\Parser.csproj", "{AECB9F1A-CADC-4CCC-ADE9-7B6F2B21E5C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AST", "AST\AST.csproj", "{A5D81338-2922-4A7B-ABE4-57C607E27ACD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D082FC3A-EE67-4D13-9D03-CB51D3FEC9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D082FC3A-EE67-4D13-9D03-CB51D3FEC9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D082FC3A-EE67-4D13-9D03-CB51D3FEC9E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AECB9F1A-CADC-4CCC-ADE9-7B6F2B21E5C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AECB9F1A-CADC-4CCC-ADE9-7B6F2B21E5C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AECB9F1A-CADC-4CCC-ADE9-7B6F2B21E5C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AECB9F1A-CADC-4CCC-ADE9-7B6F2B21E5C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5D81338-2922-4A7B-ABE4-57C607E27ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D81338-2922-4A7B-ABE4-57C607E27ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D81338-2922-4A7B-ABE4-57C607E27ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D81338-2922-4A7B-ABE4-57C607E27ACD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
