@@ -20,6 +20,41 @@ namespace Qsu.Parsing
         public Dictionary<TokenType, PrefixParseFn> PrefixParseFns;
         public Dictionary<TokenType, InfixParseFn> InfixParseFns;
 
+        public Dictionary<TokenType, Precedence> Precedences = new Dictionary<TokenType, Precedence>()
+        {
+            { TokenType.EQ, Precedence.EQUALS },
+            { TokenType.NOT_EQ, Precedence.EQUALS },
+            { TokenType.LT, Precedence.LESSGREATER },
+            { TokenType.GT, Precedence.LESSGREATER },
+            { TokenType.PLUS, Precedence.SUM },
+            { TokenType.MINUS, Precedence.SUM },
+            { TokenType.SLASH, Precedence.PRODUCT },
+            { TokenType.ASTERISK, Precedence.PRODUCT },
+        };
+        public Precedence CurrentPrecedence
+        {
+            get
+            {
+                if (Precedences.TryGetValue(CurrentToken.Type,out var p))
+                {
+                    return p;
+                }
+                return Precedence.LOWEST;
+            }
+        }
+        public Precedence NextPrecedence
+        {
+            get
+            {
+                if (Precedences.TryGetValue(NextToken.Type,out var p))
+                {
+                    return p;
+                }
+
+                return Precedence.LOWEST;
+            }
+        }
+
 
         public Parser(Lexer lexer)
         {
@@ -31,8 +66,25 @@ namespace Qsu.Parsing
 
             //トークンの種類と解析関数を関連付ける
             RegisterPrefixParseFns();
+            RegisterInfixParseFns();
+        }
+        private void RegisterInfixParseFns()
+        {
+            InfixParseFns = new Dictionary<TokenType, InfixParseFn>();
+            InfixParseFns = new Dictionary<TokenType, InfixParseFn>();
+            InfixParseFns.Add(TokenType.PLUS, ParseInfixExpression);
+            InfixParseFns.Add(TokenType.MINUS, ParseInfixExpression);
+            InfixParseFns.Add(TokenType.SLASH, ParseInfixExpression);
+            InfixParseFns.Add(TokenType.ASTERISK, ParseInfixExpression);
+            InfixParseFns.Add(TokenType.EQ, ParseInfixExpression);
+            InfixParseFns.Add(TokenType.NOT_EQ, ParseInfixExpression);
+            InfixParseFns.Add(TokenType.LT, ParseInfixExpression);
+            InfixParseFns.Add(TokenType.GT, ParseInfixExpression);
         }
 
+        /// <summary>
+        /// 前置演算子
+        /// </summary>
         private void RegisterPrefixParseFns()
         {
             PrefixParseFns = new Dictionary<TokenType, PrefixParseFn>();
@@ -69,7 +121,7 @@ namespace Qsu.Parsing
             }
 
             //型変換失敗時
-            var message = $"{this.CurrentToken.Literal} を integer に変換できません。";
+            var message = $"{CurrentToken.Literal} を integer に変換できません。";
             Errors.Add(message);
             return null;
         }
@@ -187,6 +239,19 @@ namespace Qsu.Parsing
             }
 
             IExpression leftExpression = prefix();
+
+
+            while (NextToken.Type != TokenType.SEMICOLON && precedence < NextPrecedence)
+            {
+                InfixParseFns.TryGetValue(NextToken.Type, out var infix);
+                if (infix == null)
+                {
+                    return leftExpression;
+                }
+
+                ReadToken();
+                leftExpression = infix(leftExpression);
+            }
             return leftExpression;
         }
 
@@ -218,6 +283,23 @@ namespace Qsu.Parsing
             PRODUCT,        // *
             PREFIX,         // -x, !x
             CALL            // myFunction(x)
+        }
+
+        public IExpression ParseInfixExpression(IExpression left)
+        {
+            InfixExpression expression = new InfixExpression()
+            {
+                Token = CurrentToken,
+                Operator = CurrentToken.Literal,
+                Left = left,
+            };
+
+            Precedence precedence = CurrentPrecedence;
+            ReadToken();
+            expression.Right = ParseExpression(precedence);
+
+            return expression;
+
         }
     }
 }
