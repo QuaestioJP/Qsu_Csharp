@@ -15,26 +15,9 @@
           "Qsu.dll": {}
         }
       },
-      "AST/1.0.0": {
-        "dependencies": {
-          "Lexer": "1.0.0"
-        },
-        "runtime": {
-          "AST.dll": {}
-        }
-      },
       "Lexer/1.0.0": {
         "runtime": {
           "Lexer.dll": {}
-        }
-      },
-      "Parser/1.0.0": {
-        "dependencies": {
-          "AST": "1.0.0",
-          "Lexer": "1.0.0"
-        },
-        "runtime": {
-          "Parser.dll": {}
         }
       }
     }
@@ -45,17 +28,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AST/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Lexer/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Parser/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
