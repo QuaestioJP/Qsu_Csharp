@@ -16,7 +16,9 @@ namespace Qsu.AST.Expressions
         {
             StringBuilder builder = new StringBuilder();
             builder.Append("if");
+            builder.Append(" (");
             builder.Append(Condition.ToCode());
+            builder.Append(")");
             builder.Append(" ");
             builder.Append(Consequence.ToCode());
 

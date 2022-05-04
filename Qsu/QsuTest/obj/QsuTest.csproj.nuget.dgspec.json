@@ -318,6 +318,9 @@
             "projectReferences": {
               "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {
                 "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj"
+              },
+              "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj": {
+                "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj"
               }
             }
           }

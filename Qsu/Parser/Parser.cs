@@ -241,11 +241,12 @@ namespace Qsu.Parsing
             statement.Token = CurrentToken;
             ReadToken();
 
-            // TODO: 後で実装いたします。
-            while (CurrentToken.Type != TokenType.SEMICOLON)
-            {
-                ReadToken();
-            }
+            statement.ReturnValue = ParseExpression(Precedence.LOWEST);
+
+            //セミコロンを確認
+            if (NextToken.Type != TokenType.SEMICOLON) Errors.Add("セミコロンが存在しません");
+
+            ReadToken();
 
             return statement;
         }
@@ -263,12 +264,16 @@ namespace Qsu.Parsing
             //等号
             if (!ExpectPeek(TokenType.ASSIGN)) return null;
 
-            // TODO: 後で実装いたします。
-            //式
-            while (CurrentToken.Type != TokenType.SEMICOLON)
-            {
-                ReadToken();
-            }
+            // =を読み飛ばす
+            ReadToken();
+
+            //式を解析
+            statement.Value = ParseExpression(Precedence.LOWEST);
+
+            //セミコロンを確認
+            if (NextToken.Type != TokenType.SEMICOLON) Errors.Add("セミコロンが存在しません");
+
+            ReadToken();
 
             return statement;
 

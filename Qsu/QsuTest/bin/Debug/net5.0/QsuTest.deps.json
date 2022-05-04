@@ -1104,7 +1104,8 @@
       },
       "Qsu/1.0.0": {
         "dependencies": {
-          "Lexer": "1.0.0"
+          "Lexer": "1.0.0",
+          "Parser": "1.0.0"
         },
         "runtime": {
           "Qsu.dll": {}

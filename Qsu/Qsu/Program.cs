@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Qsu.Lexing;
+using Qsu.Parsing;
 
 namespace Qsu
 {
@@ -30,10 +31,19 @@ namespace Qsu
                 if (string.IsNullOrEmpty(input)) return;
 
                 Lexer lexer = new Lexer(input);
-                for (var token = lexer.NextToken();token.Type != TokenType.EOF; token = lexer.NextToken())
+                Parser parser = new Parser(lexer);
+                var root = parser.ParseProgram();
+
+                if (parser.Errors.Count > 0)
                 {
-                    Console.WriteLine($"{{ Type: {token.Type.ToString()}, Literal: {token.Literal} }}");
+                    foreach (var error in parser.Errors)
+                    {
+                        Console.WriteLine($"\t{error}");
+                    }
+                    continue;
                 }
+
+                Console.WriteLine(root.ToCode());
             }
         }
     }
