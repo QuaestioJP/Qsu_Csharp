@@ -34,6 +34,14 @@ namespace Qsu
                 Parser parser = new Parser(lexer);
                 var root = parser.ParseProgram();
 
+                if (string.IsNullOrEmpty(input)) return;
+
+                Lexer lexer2 = new Lexer(input);
+                for (var token = lexer2.NextToken(); token.Type != TokenType.EOF; token = lexer2.NextToken())
+                {
+                    Console.WriteLine($"{{ Type: {token.Type.ToString()}, Literal: {token.Literal} }}");
+                }
+
                 if (parser.Errors.Count > 0)
                 {
                     foreach (var error in parser.Errors)
