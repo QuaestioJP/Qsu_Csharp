@@ -28,13 +28,14 @@ let a = 1;
 let x = 5;
 let x = 5;
 let x = 5;
+return 1;
 ";
             var lexer = new Lexer(input);
             var parser = new Parser(lexer);
             var root = parser.ParseRoot();
             CheckParserError(parser);
 
-            Assert.AreEqual(root.Statements.Count, 4);
+            Assert.AreEqual(root.Statements.Count, 5);
         }
     }
 }

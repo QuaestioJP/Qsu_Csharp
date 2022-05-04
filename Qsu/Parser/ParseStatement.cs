@@ -40,5 +40,24 @@ namespace Qsu.Parsing
 
             return statement;
         }
+
+        public ReturnStatement ParseReturnStatement()
+        {
+            ReturnStatement statement = new ReturnStatement();
+            statement.Token = CurrentToken;
+
+            //式
+            // TODO : 後で実装しておく
+            while (CurrentToken.Type != TokenType.SEMICOLON)
+            {
+                //読み飛ばす
+                ReadToken();
+            }
+
+            //セミコロン
+
+            return statement;
+
+        }
     }
 }

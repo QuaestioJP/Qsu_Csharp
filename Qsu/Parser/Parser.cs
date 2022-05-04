@@ -65,6 +65,8 @@ namespace Qsu.Parsing
             {
                 case TokenType.LET:
                     return ParseLetStatement();
+                case TokenType.RETURN:
+                    return ParseReturnStatement();
                 default: 
                     return null;
             }
