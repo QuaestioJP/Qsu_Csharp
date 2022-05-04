@@ -94,6 +94,18 @@ namespace Qsu.Parsing
             PrefixParseFns.Add(TokenType.MINUS, ParsePrefixExpression);
             PrefixParseFns.Add(TokenType.TRUE, ParseBooleanLiteral);
             PrefixParseFns.Add(TokenType.FALSE, ParseBooleanLiteral);
+            PrefixParseFns.Add(TokenType.LPAREN, ParseGroupedExpression);
+        }
+
+        public IExpression ParseGroupedExpression()
+        {
+            ReadToken();
+
+            var expression = ParseExpression(Precedence.LOWEST);
+
+            if (!ExpectPeek(TokenType.RPAREN)) return null;
+
+            return expression;
         }
 
         public IExpression ParsePrefixExpression()
