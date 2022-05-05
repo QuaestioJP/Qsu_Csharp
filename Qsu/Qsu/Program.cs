@@ -17,8 +17,14 @@ namespace Qsu
 
                 Lexer lexer = new Lexer(input);
                 Parser parser = new Parser(lexer);
+                Root root = parser.ParseRoot();
 
-                Console.WriteLine(parser.ParseRoot().ToJSON());
+                foreach (var item in parser.Errors)
+                {
+                    Console.WriteLine(item);
+                }
+                Console.WriteLine(root.Statements.Count);
+                Console.WriteLine(root.ToJSON());
             }
         }
     }

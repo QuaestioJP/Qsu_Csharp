@@ -19,6 +19,10 @@ namespace Qsu.Parsing
 
             CurrentToken = Lexer.NextToken();
             NextToken = Lexer.NextToken();
+
+
+            // トークンの種類と関数の関連付け
+            RegisterPrefixParseFns();
         }
 
         /// <summary>
@@ -53,23 +57,6 @@ namespace Qsu.Parsing
             }
 
             return root;
-        }
-
-        /// <summary>
-        /// 文を構文解析します
-        /// </summary>
-        /// <returns></returns>
-        public IStatement ParseStatement()
-        {
-            switch (CurrentToken.Type)
-            {
-                case TokenType.LET:
-                    return ParseLetStatement();
-                case TokenType.RETURN:
-                    return ParseReturnStatement();
-                default: 
-                    return null;
-            }
         }
 
         /// <summary>

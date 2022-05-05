@@ -24,11 +24,11 @@ namespace QsuTest
         public void TestMethod2()
         {
             string input = @"
-let a = 1;
-let x = 5;
-let x = 5;
-let x = 5;
-return 1;
+let a = e;
+let x = b;
+let x = c;
+let x = d;
+return a;
 ";
             var lexer = new Lexer(input);
             var parser = new Parser(lexer);
@@ -36,6 +36,18 @@ return 1;
             CheckParserError(parser);
 
             Assert.AreEqual(root.Statements.Count, 5);
+        }
+        [TestMethod]
+        public void TestMethod3()
+        {
+            string input = "let q = x;";
+            var lexer = new Lexer(input);
+            var parser = new Parser(lexer);
+            var root = parser.ParseRoot();
+            CheckParserError(parser);
+
+            Assert.AreEqual(root.ToJSON(), "{ \"root\":[{\"Name\":\"let\",\"Param\":{\"Name\":\"q\",\"Value\":\"x\"}}] }");
+            //{ "root":[{"Name":"let","Param":{"Name":"q","Value":"1"}}] }
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Qsu.AST.Statements
         /// <summary>
         /// 値
         /// </summary>
-        public Identifier Value;
+        public IExpression Value;
 
 
         public string ToJSON()
