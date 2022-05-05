@@ -114,5 +114,18 @@ return false;
             CheckParserError(parser);
             root.ToJSON();
         }
+        [TestMethod]
+        public void TestMethod9()
+        {
+            string input = @"
+let a = 1 + (2*2);
+return !(false == false);
+";
+            var lexer = new Lexer(input);
+            var parser = new Parser(lexer);
+            var root = parser.ParseRoot();
+            CheckParserError(parser);
+            root.ToJSON();
+        }
     }
 }

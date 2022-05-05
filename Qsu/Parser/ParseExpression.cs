@@ -29,6 +29,7 @@ namespace Qsu.Parsing
             PrefixParseFns.Add(TokenType.MINUS,ParsePrefixExpression);
             PrefixParseFns.Add(TokenType.TRUE, ParseBooleanLiteral);
             PrefixParseFns.Add(TokenType.FALSE, ParseBooleanLiteral);
+            PrefixParseFns.Add(TokenType.LPAREN, ParseGroupedExpression);
         }
 
         /// <summary>
@@ -60,6 +61,20 @@ namespace Qsu.Parsing
             }
 
             return leftExpression;
+        }
+
+        public IExpression ParseGroupedExpression()
+        {
+            //"("をぶっとばす
+            ReadToken();
+
+            // 括弧内を解析
+            var expression = ParseExpression(Precedence.LOWEST);
+
+            //")"があることを確認、そう決まっているのだ
+            if (!ExpectPeek(TokenType.RPAREN)) return null;
+
+            return expression;
         }
 
         public IExpression ParseIdentifier()
