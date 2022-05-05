@@ -20,5 +20,9 @@ namespace Qsu.Parsing
         {
             Errors.Add($"{actual.ToString()}ではなく、{expected.ToString()}が来なければいけません。");
         }
+        private void AddPrefixParseFnError(TokenType tokenType)
+        {
+            Errors.Add($"{tokenType.ToString()} に関連付けられた Prefix Parse Function が存在しません。");
+        }
     }
 }

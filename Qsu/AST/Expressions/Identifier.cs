@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Qsu.AST.ToJSON;
 using Qsu.Lexing;
 
 namespace Qsu.AST.Expressions
@@ -24,11 +25,10 @@ namespace Qsu.AST.Expressions
 
         public string ToJSON()
         {
-            var builder = new StringBuilder();
-
-            builder.Append($"\"{Value}\"");
-
-            return builder.ToString();
+            return JsonUtil.ToJSON("Ident", new (string, string)[]
+            {
+                ("Value",$"\"{Value}\"")
+            });
         }
     }
 }

@@ -6,13 +6,13 @@ namespace Qsu.AST.ToJSON
 {
     public static class JsonUtil
     {
-        public static string StatementToJSON(string StateName, (string , string)[] p)
+        public static string ToJSON(string Name, (string , string)[] p)
         {
             var builder = new StringBuilder();
 
             builder.Append("{");
             
-            builder.Append($"\"Name\":\"{StateName}\"");
+            builder.Append($"\"ASTName\":\"{Name}\"");
             
             builder.Append(",");
 

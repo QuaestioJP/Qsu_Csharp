@@ -46,7 +46,7 @@ return a;
             var root = parser.ParseRoot();
             CheckParserError(parser);
 
-            Assert.AreEqual(root.ToJSON(), "{ \"root\":[{\"Name\":\"let\",\"Param\":{\"Name\":\"q\",\"Value\":\"x\"}}] }");
+            Assert.AreEqual(root.ToJSON(), "{ \"root\":[{\"ASTName\":\"let\",\"Param\":{\"Name\":{\"ASTName\":\"Ident\",\"Param\":{\"Value\":\"q\"}},\"Value\":{\"ASTName\":\"Ident\",\"Param\":{\"Value\":\"x\"}}}}] }");
             //{ "root":[{"Name":"let","Param":{"Name":"q","Value":"1"}}] }
         }
         [TestMethod]
@@ -61,6 +61,19 @@ let a = 2;
             CheckParserError(parser);
             root.ToJSON();
 
+        }
+        [TestMethod]
+        public void TestMethod5()
+        {
+            string input = @"
+let a = -2;
+return !5;
+";
+            var lexer = new Lexer(input);
+            var parser = new Parser(lexer);
+            var root = parser.ParseRoot();
+            CheckParserError(parser);
+            root.ToJSON();
         }
     }
 }

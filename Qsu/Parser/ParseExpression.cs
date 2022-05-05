@@ -25,6 +25,8 @@ namespace Qsu.Parsing
             PrefixParseFns = new Dictionary<TokenType, PrefixParseFn>();
             PrefixParseFns.Add(TokenType.IDENT, ParseIdentifier);
             PrefixParseFns.Add(TokenType.INT, ParseIntegerLiteral);
+            PrefixParseFns.Add(TokenType.BANG, ParsePrefixExpression);
+            PrefixParseFns.Add(TokenType.MINUS,ParsePrefixExpression);
         }
 
         /// <summary>
@@ -34,7 +36,11 @@ namespace Qsu.Parsing
         public IExpression ParseExpression(Precedence precedence)
         {
             PrefixParseFns.TryGetValue(CurrentToken.Type, out var prefix);
-            if (prefix == null) return null;
+            if (prefix == null)
+            {
+                AddPrefixParseFnError(CurrentToken.Type);
+                return null;
+            }
 
             var leftExpression = prefix();
             return leftExpression;
@@ -59,6 +65,20 @@ namespace Qsu.Parsing
             //型変換失敗
             Errors.Add($"{CurrentToken.Literal}をintに変換できません。");
             return null;
+        }
+
+        public IExpression ParsePrefixExpression()
+        {
+            var expression = new PrefixExpression()
+            {
+                Token = CurrentToken,
+                Operator = CurrentToken.Literal,
+            };
+
+            ReadToken();
+
+            expression.Right = ParseExpression(Precedence.PREFIX);
+            return expression;
         }
     }
 

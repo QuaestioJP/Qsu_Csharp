@@ -5,19 +5,20 @@ using Qsu.AST;
 using Qsu.AST.ToJSON;
 using Qsu.Lexing;
 
-
 namespace Qsu.AST.Expressions
 {
-    public class IntegerLiteral : IExpression
+    public class PrefixExpression : IExpression
     {
         public Token Token;
-        public int Value;
+        public string Operator;
+        public IExpression Right;
 
         public string ToJSON()
         {
-            return JsonUtil.ToJSON("Integer", new (string, string)[]
+            return JsonUtil.ToJSON("Prefix", new (string, string)[]
             {
-                ("Value",$"\"{Value}\"")
+                ("Operator",$"\"{Operator}\""),
+                ("Right",Right.ToJSON())
             });
         }
     }
