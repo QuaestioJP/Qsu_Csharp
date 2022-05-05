@@ -49,5 +49,18 @@ return a;
             Assert.AreEqual(root.ToJSON(), "{ \"root\":[{\"Name\":\"let\",\"Param\":{\"Name\":\"q\",\"Value\":\"x\"}}] }");
             //{ "root":[{"Name":"let","Param":{"Name":"q","Value":"1"}}] }
         }
+        [TestMethod]
+        public void TestMethod4()
+        {
+            string input = @"
+let a = 2;
+";
+            var lexer = new Lexer(input);
+            var parser = new Parser(lexer);
+            var root = parser.ParseRoot();
+            CheckParserError(parser);
+            root.ToJSON();
+
+        }
     }
 }
