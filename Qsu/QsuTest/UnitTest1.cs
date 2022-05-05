@@ -75,5 +75,31 @@ return !5;
             CheckParserError(parser);
             root.ToJSON();
         }
+        [TestMethod]
+        public void TestMethod6()
+        {
+            string input = @"
+let a = 2 - 1;
+return 5 + 2;
+";
+            var lexer = new Lexer(input);
+            var parser = new Parser(lexer);
+            var root = parser.ParseRoot();
+            CheckParserError(parser);
+            root.ToJSON();
+        }
+        [TestMethod]
+        public void TestMethod7()
+        {
+            string input = @"
+let a = 2 - 1 * 2;
+return 5 + 2;
+";
+            var lexer = new Lexer(input);
+            var parser = new Parser(lexer);
+            var root = parser.ParseRoot();
+            CheckParserError(parser);
+            root.ToJSON();
+        }
     }
 }

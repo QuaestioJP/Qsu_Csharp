@@ -43,6 +43,20 @@ namespace Qsu.Parsing
             }
 
             var leftExpression = prefix();
+
+            while (NextToken.Type != TokenType.SEMICOLON
+                && precedence < NextPrecedence)
+            {
+                InfixParseFns.TryGetValue(NextToken.Type, out var infix);
+                if (infix == null)
+                {
+                    return leftExpression;
+                }
+
+                ReadToken();
+                leftExpression = infix(leftExpression);
+            }
+
             return leftExpression;
         }
 
