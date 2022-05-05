@@ -22,6 +22,8 @@ namespace Qsu.Parsing
                     return ParseLetStatement();
                 case TokenType.RETURN:
                     return ParseReturnStatement();
+                case TokenType.IF:
+                    return ParseIfStatement();
                 default:
                     Errors.Add("未定義の構文が使用されました。");
                     return null;
@@ -73,6 +75,72 @@ namespace Qsu.Parsing
 
             return statement;
 
+        }
+
+        public BlockStatement ParseBlockStatement()
+        {
+            var block = new BlockStatement()
+            {
+                Token = CurrentToken,
+                Statements = new List<IStatement>()
+            };
+
+            //"{"をぶっ飛ばす
+            ReadToken();
+
+            while (this.CurrentToken.Type != TokenType.RBRACE
+                && this.CurrentToken.Type != TokenType.EOF)
+            {
+                // ブロックの中身を解析する
+                var statement = this.ParseStatement();
+                if (statement != null)
+                {
+                    block.Statements.Add(statement);
+                }
+                this.ReadToken();
+            }
+
+            return block;
+        }
+
+        public IfStatement ParseIfStatement()
+        {
+            var expression = new IfStatement()
+            {
+                Token = this.CurrentToken // IF
+            };
+
+            // if の後は括弧 ( でなければならない
+            if (!this.ExpectPeek(TokenType.LPAREN)) return null;
+
+            // 括弧 ( を読み飛ばす
+            this.ReadToken();
+
+            // ifの条件式を解析する
+            expression.Condition = this.ParseExpression(Precedence.LOWEST);
+
+            // 閉じ括弧 ) 中括弧が続く 
+            if (!this.ExpectPeek(TokenType.RPAREN)) return null;
+            if (!this.ExpectPeek(TokenType.LBRACE)) return null;
+
+            // この時点で { が現在のトークン
+            // ブロック文の解析関数を呼ぶ
+            expression.Consequence = this.ParseBlockStatement();
+
+            // else句があれば解析する
+            if (this.NextToken.Type == TokenType.ELSE)
+            {
+                // else に読み進める
+                this.ReadToken();
+                // else の後に { が続かなければならない
+                if (!this.ExpectPeek(TokenType.LBRACE)) return null;
+
+                // この時点で { が現在のトークン
+                // ブロック文の解析関数を呼ぶ
+                expression.Alternative = this.ParseBlockStatement();
+            }
+
+            return expression;
         }
     }
 }
