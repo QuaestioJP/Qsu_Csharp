@@ -27,6 +27,8 @@ namespace Qsu.Parsing
             PrefixParseFns.Add(TokenType.INT, ParseIntegerLiteral);
             PrefixParseFns.Add(TokenType.BANG, ParsePrefixExpression);
             PrefixParseFns.Add(TokenType.MINUS,ParsePrefixExpression);
+            PrefixParseFns.Add(TokenType.TRUE, ParseBooleanLiteral);
+            PrefixParseFns.Add(TokenType.FALSE, ParseBooleanLiteral);
         }
 
         /// <summary>
@@ -93,6 +95,15 @@ namespace Qsu.Parsing
 
             expression.Right = ParseExpression(Precedence.PREFIX);
             return expression;
+        }
+
+        public IExpression ParseBooleanLiteral()
+        {
+            return new BooleanLiteral()
+            {
+                Token = CurrentToken,
+                Value = CurrentToken.Type == TokenType.TRUE
+            };
         }
     }
 

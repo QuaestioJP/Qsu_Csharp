@@ -101,5 +101,18 @@ return 5 + 2;
             CheckParserError(parser);
             root.ToJSON();
         }
+        [TestMethod]
+        public void TestMethod8()
+        {
+            string input = @"
+let a = true;
+return false;
+";
+            var lexer = new Lexer(input);
+            var parser = new Parser(lexer);
+            var root = parser.ParseRoot();
+            CheckParserError(parser);
+            root.ToJSON();
+        }
     }
 }
