@@ -127,5 +127,17 @@ return !(false == false);
             CheckParserError(parser);
             root.ToJSON();
         }
+        [TestMethod]
+        public void TestMethod10()
+        {
+            string input = @"
+
+";
+            var lexer = new Lexer(input);
+            var parser = new Parser(lexer);
+            var root = parser.ParseRoot();
+            CheckParserError(parser);
+            root.ToJSON();
+        }
     }
 }

@@ -105,7 +105,7 @@ namespace Qsu.Parsing
 
         public IfStatement ParseIfStatement()
         {
-            var expression = new IfStatement()
+            var statement = new IfStatement()
             {
                 Token = this.CurrentToken // IF
             };
@@ -117,7 +117,7 @@ namespace Qsu.Parsing
             this.ReadToken();
 
             // ifの条件式を解析する
-            expression.Condition = this.ParseExpression(Precedence.LOWEST);
+            statement.Condition = this.ParseExpression(Precedence.LOWEST);
 
             // 閉じ括弧 ) 中括弧が続く 
             if (!this.ExpectPeek(TokenType.RPAREN)) return null;
@@ -125,7 +125,7 @@ namespace Qsu.Parsing
 
             // この時点で { が現在のトークン
             // ブロック文の解析関数を呼ぶ
-            expression.Consequence = this.ParseBlockStatement();
+            statement.Consequence = this.ParseBlockStatement();
 
             // else句があれば解析する
             if (this.NextToken.Type == TokenType.ELSE)
@@ -137,10 +137,10 @@ namespace Qsu.Parsing
 
                 // この時点で { が現在のトークン
                 // ブロック文の解析関数を呼ぶ
-                expression.Alternative = this.ParseBlockStatement();
+                statement.Alternative = this.ParseBlockStatement();
             }
 
-            return expression;
+            return statement;
         }
     }
 }

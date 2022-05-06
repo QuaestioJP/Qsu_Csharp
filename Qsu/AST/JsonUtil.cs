@@ -33,5 +33,9 @@ namespace Qsu.AST.ToJSON
 
             return builder.ToString();
         }
+        public static string ToJSONlist(string[] p)
+        {
+            return $"[{string.Join(",", p)}]";
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace Qsu.AST.Statements
         public string ToJSON()
         {
 
-            return JsonUtil.ToJSON("return",new (string, string)[] { 
+            return JsonUtil.ToJSON("Return",new (string, string)[] { 
                 ("Value",Value.ToJSON())
                 //$"\"a\""
                 //Value.ToJSON

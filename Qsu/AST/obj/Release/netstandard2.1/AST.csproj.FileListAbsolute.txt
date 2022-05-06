@@ -1,0 +1,13 @@
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\AST\bin\Release\netstandard2.1\AST.deps.json
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\AST\bin\Release\netstandard2.1\AST.dll
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\AST\bin\Release\netstandard2.1\AST.pdb
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\AST\bin\Release\netstandard2.1\Lexer.dll
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\AST\bin\Release\netstandard2.1\Lexer.pdb
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\AST\obj\Release\netstandard2.1\AST.csproj.AssemblyReference.cache
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\AST\obj\Release\netstandard2.1\AST.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\AST\obj\Release\netstandard2.1\AST.AssemblyInfoInputs.cache
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\AST\obj\Release\netstandard2.1\AST.AssemblyInfo.cs
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\AST\obj\Release\netstandard2.1\AST.csproj.CoreCompileInputs.cache
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\AST\obj\Release\netstandard2.1\AST.csproj.CopyComplete
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\AST\obj\Release\netstandard2.1\AST.dll
+C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\AST\obj\Release\netstandard2.1\AST.pdb

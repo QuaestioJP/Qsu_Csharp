@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {}
+    "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {
+    "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj",
+        "projectUniqueName": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj",
         "projectName": "Lexer",
-        "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj",
+        "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj",
         "packagesPath": "C:\\Users\\KurisuJuha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\obj\\",
+        "outputPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Lexer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

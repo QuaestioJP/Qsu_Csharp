@@ -53,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj",
+      "projectUniqueName": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj",
       "projectName": "Parser",
-      "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj",
+      "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj",
       "packagesPath": "C:\\Users\\KurisuJuha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Parser\\obj\\",
+      "outputPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Parser\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -80,11 +80,11 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\AST\\AST.csproj": {
-              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\AST\\AST.csproj"
+            "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\AST\\AST.csproj": {
+              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\AST\\AST.csproj"
             },
-            "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {
-              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj"
+            "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {
+              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj"
             }
           }
         }
