@@ -2,6 +2,7 @@
 using Qsu.AST;
 using Qsu.Lexing;
 using Qsu.Parsing;
+using Qsu.Evaluating;
 
 namespace Qsu
 {
@@ -23,7 +24,15 @@ namespace Qsu
                 {
                     Console.WriteLine(item);
                 }
-                Console.WriteLine(root.Statements.Count);
+
+                var evaluator = new Evaluator();
+                var evaluated = evaluator.Eval(root);
+
+                if (evaluated != null)
+                {
+                    Console.WriteLine(evaluated.Inspect());
+                }
+
                 Console.WriteLine(root.ToJSON());
             }
         }

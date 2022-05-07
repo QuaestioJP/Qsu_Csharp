@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "AST/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Lexer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AST.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AST.dll": {}
+        }
+      },
+      "Lexer/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Lexer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Lexer.dll": {}
+        }
+      },
+      "Objects/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Objects.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Objects.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AST/1.0.0": {
+      "type": "project",
+      "path": "../AST/AST.csproj",
+      "msbuildProject": "../AST/AST.csproj"
+    },
+    "Lexer/1.0.0": {
+      "type": "project",
+      "path": "../Lexer/Lexer.csproj",
+      "msbuildProject": "../Lexer/Lexer.csproj"
+    },
+    "Objects/1.0.0": {
+      "type": "project",
+      "path": "../Objects/Objects.csproj",
+      "msbuildProject": "../Objects/Objects.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "AST >= 1.0.0",
+      "Objects >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\KurisuJuha\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Evaluator\\Evaluator.csproj",
+      "projectName": "Evaluator",
+      "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Evaluator\\Evaluator.csproj",
+      "packagesPath": "C:\\Users\\KurisuJuha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Evaluator\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\KurisuJuha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\AST\\AST.csproj": {
+              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\AST\\AST.csproj"
+            },
+            "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Objects\\Objects.csproj": {
+              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Objects\\Objects.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "NETStandard.Library": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

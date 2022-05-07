@@ -9,7 +9,9 @@
       "Qsu/1.0.0": {
         "dependencies": {
           "AST": "1.0.0",
+          "Evaluator": "1.0.0",
           "Lexer": "1.0.0",
+          "Objects": "1.0.0",
           "Parser": "1.0.0"
         },
         "runtime": {
@@ -24,9 +26,23 @@
           "AST.dll": {}
         }
       },
+      "Evaluator/1.0.0": {
+        "dependencies": {
+          "AST": "1.0.0",
+          "Objects": "1.0.0"
+        },
+        "runtime": {
+          "Evaluator.dll": {}
+        }
+      },
       "Lexer/1.0.0": {
         "runtime": {
           "Lexer.dll": {}
+        }
+      },
+      "Objects/1.0.0": {
+        "runtime": {
+          "Objects.dll": {}
         }
       },
       "Parser/1.0.0": {
@@ -51,7 +67,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Evaluator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Lexer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Objects/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

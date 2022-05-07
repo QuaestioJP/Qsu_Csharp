@@ -18,3 +18,13 @@ C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Lexer\obj\Debug\netstandard2.1\Lexe
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Lexer\obj\Debug\netstandard2.1\Lexer.csproj.CoreCompileInputs.cache
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Lexer\obj\Debug\netstandard2.1\Lexer.dll
 C:\Users\KurisuJuha\Documents\Qsu_Csharp\Qsu\Lexer\obj\Debug\netstandard2.1\Lexer.pdb
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\bin\Debug\netstandard2.1\Lexer.deps.json
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\bin\Debug\netstandard2.1\Lexer.dll
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\bin\Debug\netstandard2.1\Lexer.pdb
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\obj\Debug\netstandard2.1\Lexer.csproj.AssemblyReference.cache
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\obj\Debug\netstandard2.1\Lexer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\obj\Debug\netstandard2.1\Lexer.AssemblyInfoInputs.cache
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\obj\Debug\netstandard2.1\Lexer.AssemblyInfo.cs
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\obj\Debug\netstandard2.1\Lexer.csproj.CoreCompileInputs.cache
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\obj\Debug\netstandard2.1\Lexer.dll
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\obj\Debug\netstandard2.1\Lexer.pdb

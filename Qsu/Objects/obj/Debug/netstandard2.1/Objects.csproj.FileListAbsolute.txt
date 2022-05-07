@@ -1,0 +1,10 @@
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Objects\bin\Debug\netstandard2.1\Objects.deps.json
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Objects\bin\Debug\netstandard2.1\Objects.dll
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Objects\bin\Debug\netstandard2.1\Objects.pdb
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Objects\obj\Debug\netstandard2.1\Objects.csproj.AssemblyReference.cache
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Objects\obj\Debug\netstandard2.1\Objects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Objects\obj\Debug\netstandard2.1\Objects.AssemblyInfoInputs.cache
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Objects\obj\Debug\netstandard2.1\Objects.AssemblyInfo.cs
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Objects\obj\Debug\netstandard2.1\Objects.csproj.CoreCompileInputs.cache
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Objects\obj\Debug\netstandard2.1\Objects.dll
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Objects\obj\Debug\netstandard2.1\Objects.pdb

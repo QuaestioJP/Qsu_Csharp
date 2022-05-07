@@ -44,3 +44,7 @@ C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Qsu\obj\Release\net5.0\Qsu.d
 C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Qsu\obj\Release\net5.0\ref\Qsu.dll
 C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Qsu\obj\Release\net5.0\Qsu.pdb
 C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Qsu\obj\Release\net5.0\Qsu.genruntimeconfig.cache
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Qsu\bin\Release\net5.0\Evaluator.dll
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Qsu\bin\Release\net5.0\Objects.dll
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Qsu\bin\Release\net5.0\Evaluator.pdb
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Qsu\bin\Release\net5.0\Objects.pdb

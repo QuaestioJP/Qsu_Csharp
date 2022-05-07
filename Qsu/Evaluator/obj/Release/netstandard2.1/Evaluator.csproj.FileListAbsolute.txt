@@ -1,0 +1,17 @@
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\bin\Release\netstandard2.1\Evaluator.deps.json
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\bin\Release\netstandard2.1\Evaluator.dll
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\bin\Release\netstandard2.1\Evaluator.pdb
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\bin\Release\netstandard2.1\AST.dll
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\bin\Release\netstandard2.1\Lexer.dll
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\bin\Release\netstandard2.1\Objects.dll
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\bin\Release\netstandard2.1\AST.pdb
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\bin\Release\netstandard2.1\Objects.pdb
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\bin\Release\netstandard2.1\Lexer.pdb
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\obj\Release\netstandard2.1\Evaluator.csproj.AssemblyReference.cache
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\obj\Release\netstandard2.1\Evaluator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\obj\Release\netstandard2.1\Evaluator.AssemblyInfoInputs.cache
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\obj\Release\netstandard2.1\Evaluator.AssemblyInfo.cs
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\obj\Release\netstandard2.1\Evaluator.csproj.CoreCompileInputs.cache
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\obj\Release\netstandard2.1\Evaluator.csproj.CopyComplete
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\obj\Release\netstandard2.1\Evaluator.dll
+C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Evaluator\obj\Release\netstandard2.1\Evaluator.pdb
