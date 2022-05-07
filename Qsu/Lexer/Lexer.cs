@@ -210,13 +210,13 @@ namespace Qsu.Lexing
         LBRACE,
         RBRACE,
         // キーワード
-        FUNCTION,
         LET,
         IF,
         ELSE,
         RETURN,
         TRUE,
         FALSE,
+        WHILE
     }
     public class Token
     {
@@ -226,12 +226,12 @@ namespace Qsu.Lexing
         public static Dictionary<string, TokenType> Keywords = new Dictionary<string, TokenType>()
         {
             {"let" , TokenType.LET},
-            {"fn", TokenType.FUNCTION },
             {"if",TokenType.IF },
             {"else", TokenType.ELSE },
             {"return" , TokenType.RETURN},
             {"true",TokenType.TRUE },
             {"false" ,TokenType.FALSE},
+            {"while" ,TokenType.WHILE},
         };
 
         public Token(TokenType type,string literal)

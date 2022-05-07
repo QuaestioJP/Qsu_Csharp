@@ -24,6 +24,8 @@ namespace Qsu.Parsing
                     return ParseReturnStatement();
                 case TokenType.IF:
                     return ParseIfStatement();
+                case TokenType.WHILE:
+                    return ParseWhileStatement();
                 default:
                     Errors.Add("未定義の構文が使用されました。");
                     return null;
@@ -139,6 +141,28 @@ namespace Qsu.Parsing
                 // ブロック文の解析関数を呼ぶ
                 statement.Alternative = this.ParseBlockStatement();
             }
+
+            return statement;
+        }
+
+        public WhileStatement ParseWhileStatement()
+        {
+            var statement = new WhileStatement()
+            {
+                Token = CurrentToken
+            };
+
+            //(
+            if (!ExpectPeek(TokenType.LPAREN)) return null;
+            ReadToken();
+            //条件式
+            statement.Condition = ParseExpression(Precedence.LOWEST);
+            //){
+            if (!ExpectPeek(TokenType.RPAREN)) return null;
+            if (!ExpectPeek(TokenType.LBRACE)) return null;
+            //ブロック解析
+            statement.Block = ParseBlockStatement();
+
 
             return statement;
         }
