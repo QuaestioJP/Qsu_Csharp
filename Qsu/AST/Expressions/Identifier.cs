@@ -39,5 +39,14 @@ namespace Qsu.AST.Expressions
 
             return builder.ToString();
         }
+
+        public string ToPython()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("Qsu_" + Value);
+            
+            return builder.ToString();
+        }
     }
 }

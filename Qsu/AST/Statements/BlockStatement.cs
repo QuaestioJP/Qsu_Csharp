@@ -43,5 +43,17 @@ namespace Qsu.AST.Statements
 
             return builder.ToString();
         }
+
+        public string ToPython()
+        {
+            var builder = new StringBuilder();
+
+            foreach (var item in Statements)
+            {
+                builder.Append("    " + item.ToPython() + "\n");
+            }
+
+            return builder.ToString();
+        }
     }
 }

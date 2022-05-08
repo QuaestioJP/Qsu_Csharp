@@ -12,6 +12,8 @@ namespace Qsu.AST
         public string ToJSON();
 
         public string ToCsharp();
+
+        public string ToPython();
     }
 
     /// <summary>

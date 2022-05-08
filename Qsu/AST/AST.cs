@@ -56,5 +56,17 @@ namespace Qsu.AST
 
             return builder.ToString();
         }
+
+        public string ToPython()
+        {
+            var builder = new StringBuilder();
+
+            foreach (var item in Statements)
+            {
+                builder.Append(item.ToPython());
+            }
+
+            return builder.ToString();
+        }
     }
 }

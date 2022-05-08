@@ -32,5 +32,16 @@ namespace Qsu.AST.Expressions
 
             return builder.ToString();
         }
+
+        public string ToPython()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append(Operator);
+
+            builder.Append(Right.ToPython());
+
+            return builder.ToString();
+        }
     }
 }

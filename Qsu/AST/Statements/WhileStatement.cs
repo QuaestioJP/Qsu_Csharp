@@ -38,5 +38,15 @@ namespace Qsu.AST.Statements
 
             return builder.ToString();
         }
+        public string ToPython()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("while ");
+            builder.Append(Condition.ToPython() + ":\n");
+            builder.Append(Block.ToPython());
+
+            return builder.ToString();
+        }
     }
 }

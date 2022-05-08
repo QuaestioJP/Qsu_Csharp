@@ -57,5 +57,21 @@ namespace Qsu.AST.Statements
 
             return builder.ToString();
         }
+        public string ToPython()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("if ");
+            builder.Append(Condition.ToPython());
+            builder.Append(":\n");
+            builder.Append(Consequence.ToPython());
+            if (Alternative != null)
+            {
+                builder.Append("else:\n");
+                builder.Append(Alternative.ToPython());
+            }
+
+            return builder.ToString();
+        }
     }
 }
