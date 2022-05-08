@@ -19,11 +19,24 @@ namespace Qsu.AST.Statements
         public string ToJSON()
         {
 
-            return JsonUtil.ToJSON("Return",new (string, string)[] { 
+            return JsonUtil.ToJSON("return",new (string, string)[] { 
                 ("Value",Value.ToJSON())
                 //$"\"a\""
                 //Value.ToJSON
             });
+        }
+
+        public string ToCsharp()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("return ");
+
+            builder.Append(Value.ToCsharp());
+
+            builder.Append(";");
+
+            return builder.ToString();
         }
     }
 }

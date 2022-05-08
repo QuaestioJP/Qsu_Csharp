@@ -24,7 +24,6 @@ namespace Qsu.Parsing
             // トークンの種類と関数の関連付け
             RegisterPrefixParseFns();
             RegisterInfixParseFns();
-            RegisterClassTokenType();
         }
 
         /// <summary>

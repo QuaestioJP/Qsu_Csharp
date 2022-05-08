@@ -27,5 +27,21 @@ namespace Qsu.AST.Statements
                 ("statements",$"[{string.Join(",",param)}]")
             });
         }
+
+        public string ToCsharp()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("{");
+
+            foreach (var item in Statements)
+            {
+                builder.Append(item.ToCsharp());
+            }
+
+            builder.Append("}");
+
+            return builder.ToString();
+        }
     }
 }

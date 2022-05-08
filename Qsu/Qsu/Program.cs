@@ -1,8 +1,9 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 using Qsu.AST;
 using Qsu.Lexing;
 using Qsu.Parsing;
-using Qsu.Evaluating;
 
 namespace Qsu
 {
@@ -10,30 +11,37 @@ namespace Qsu
     {
         static void Main(string[] args)
         {
-            while (true)
+            if (args.Length != 0)
             {
+                StreamReader sr = new StreamReader(args[0], Encoding.UTF8);
+                string str = sr.ReadToEnd();
+                sr.Close();
 
-                Console.Write(">> ");
-                string input = Console.ReadLine();
-
-                Lexer lexer = new Lexer(input);
+                Lexer lexer = new Lexer(str);
                 Parser parser = new Parser(lexer);
                 Root root = parser.ParseRoot();
-
-                foreach (var item in parser.Errors)
-                {
-                    Console.WriteLine(item);
-                }
-
-                var evaluator = new Evaluator();
-                var evaluated = evaluator.Eval(root);
-
-                if (evaluated != null)
-                {
-                    Console.WriteLine(evaluated.Inspect());
-                }
-
                 Console.WriteLine(root.ToJSON());
+            }
+            else
+            {
+                while (true)
+                {
+
+                    Console.Write(">> ");
+                    string input = Console.ReadLine();
+
+                    Lexer lexer = new Lexer(input);
+                    Parser parser = new Parser(lexer);
+                    Root root = parser.ParseRoot();
+
+                    foreach (var item in parser.Errors)
+                    {
+                        Console.WriteLine(item);
+                    }
+
+                    Console.WriteLine("JSON:    " + root.ToJSON());
+                    Console.WriteLine("Csharp:    " + root.ToCsharp());
+                }
             }
         }
     }

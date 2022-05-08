@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using System;
 using System.Collections.Generic;
 using Qsu.AST;
 using Qsu.AST.Expressions;
@@ -27,6 +26,33 @@ namespace Qsu.AST
                 }
             }
             builder.Append("] }");
+
+            return builder.ToString();
+        }
+
+        public string ToCsharp()
+        {
+            var builder = new StringBuilder();
+            builder.Append("using System;");
+            builder.Append("namespace QsuProject");
+            builder.Append("{");
+
+            builder.Append("public class Program");
+            builder.Append("{");
+
+            builder.Append("public void Main(string[] args)");
+            builder.Append("{");
+
+            foreach (var item in Statements)
+            {
+                builder.Append(item.ToCsharp());
+            }
+
+            builder.Append("}");
+
+            builder.Append("}");
+
+            builder.Append("}");
 
             return builder.ToString();
         }

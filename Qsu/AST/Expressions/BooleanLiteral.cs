@@ -18,5 +18,14 @@ namespace Qsu.AST.Expressions
                 ("Value",$"\"{Value.ToString()}\"")
             });
         }
+
+        public string ToCsharp()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append(Value ? "true" : "false");
+
+            return builder.ToString();
+        }
     }
 }

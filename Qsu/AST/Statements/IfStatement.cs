@@ -36,5 +36,26 @@ namespace Qsu.AST.Statements
                 });
             }
         }
+        public string ToCsharp()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("if");
+            builder.Append("(");
+            builder.Append(Condition.ToCsharp());
+            builder.Append(")");
+            builder.Append("{");
+            builder.Append(Consequence.ToCsharp());
+            builder.Append("}");
+            if (Alternative != null)
+            {
+                builder.Append("else");
+                builder.Append("{");
+                builder.Append(Alternative.ToCsharp());
+                builder.Append("}");
+            }
+
+            return builder.ToString();
+        }
     }
 }

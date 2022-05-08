@@ -28,5 +28,22 @@ namespace Qsu.AST.Statements
                 //Value.ToJSON
             });
         }
+
+        public string ToCsharp()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("var ");
+
+            builder.Append(Name.ToCsharp());
+
+            builder.Append(" = ");
+
+            builder.Append(Value.ToCsharp());
+
+            builder.Append(";");
+
+            return builder.ToString();
+        }
     }
 }

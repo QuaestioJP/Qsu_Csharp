@@ -30,5 +30,14 @@ namespace Qsu.AST.Expressions
                 ("Value",$"\"{Value}\"")
             });
         }
+
+        public string ToCsharp()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("Qsu_" + Value);
+
+            return builder.ToString();
+        }
     }
 }

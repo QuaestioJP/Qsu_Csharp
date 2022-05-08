@@ -15,20 +15,6 @@
           "bin/placeholder/AST.dll": {}
         }
       },
-      "Evaluator/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "AST": "1.0.0",
-          "Objects": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Evaluator.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Evaluator.dll": {}
-        }
-      },
       "Lexer/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -37,16 +23,6 @@
         },
         "runtime": {
           "bin/placeholder/Lexer.dll": {}
-        }
-      },
-      "Objects/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "compile": {
-          "bin/placeholder/Objects.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Objects.dll": {}
         }
       },
       "Parser/1.0.0": {
@@ -71,20 +47,10 @@
       "path": "../AST/AST.csproj",
       "msbuildProject": "../AST/AST.csproj"
     },
-    "Evaluator/1.0.0": {
-      "type": "project",
-      "path": "../Evaluator/Evaluator.csproj",
-      "msbuildProject": "../Evaluator/Evaluator.csproj"
-    },
     "Lexer/1.0.0": {
       "type": "project",
       "path": "../Lexer/Lexer.csproj",
       "msbuildProject": "../Lexer/Lexer.csproj"
-    },
-    "Objects/1.0.0": {
-      "type": "project",
-      "path": "../Objects/Objects.csproj",
-      "msbuildProject": "../Objects/Objects.csproj"
     },
     "Parser/1.0.0": {
       "type": "project",
@@ -95,9 +61,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "AST >= 1.0.0",
-      "Evaluator >= 1.0.0",
       "Lexer >= 1.0.0",
-      "Objects >= 1.0.0",
       "Parser >= 1.0.0"
     ]
   },
@@ -139,14 +103,8 @@
             "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\AST\\AST.csproj": {
               "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\AST\\AST.csproj"
             },
-            "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Evaluator\\Evaluator.csproj": {
-              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Evaluator\\Evaluator.csproj"
-            },
             "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {
               "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj"
-            },
-            "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Objects\\Objects.csproj": {
-              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Objects\\Objects.csproj"
             },
             "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj": {
               "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj"
@@ -181,5 +139,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "キャッシュ ファイルの読み取りの問題 C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Qsu\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

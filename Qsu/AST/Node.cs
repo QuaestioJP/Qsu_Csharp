@@ -10,6 +10,8 @@ namespace Qsu.AST
     public interface INode
     {
         public string ToJSON();
+
+        public string ToCsharp();
     }
 
     /// <summary>

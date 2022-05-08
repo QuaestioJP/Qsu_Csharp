@@ -7,9 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AST\AST.csproj" />
-    <ProjectReference Include="..\Evaluator\Evaluator.csproj" />
     <ProjectReference Include="..\Lexer\Lexer.csproj" />
-    <ProjectReference Include="..\Objects\Objects.csproj" />
     <ProjectReference Include="..\Parser\Parser.csproj" />
   </ItemGroup>
 

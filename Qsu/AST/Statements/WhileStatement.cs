@@ -23,5 +23,20 @@ namespace Qsu.AST.Statements
                 ("Block",Block.ToJSON())
             });
         }
+
+        public string ToCsharp()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("while");
+            builder.Append("(");
+            builder.Append(Condition.ToCsharp());
+            builder.Append(")"); 
+            builder.Append("{");
+            builder.Append(Block.ToCsharp());
+            builder.Append("}");
+
+            return builder.ToString();
+        }
     }
 }

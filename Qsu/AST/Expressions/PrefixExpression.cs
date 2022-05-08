@@ -21,5 +21,16 @@ namespace Qsu.AST.Expressions
                 ("Right",Right.ToJSON())
             });
         }
+
+        public string ToCsharp()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append(Operator);
+
+            builder.Append(Right.ToCsharp());
+
+            return builder.ToString();
+        }
     }
 }
