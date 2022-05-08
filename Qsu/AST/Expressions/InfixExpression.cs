@@ -49,5 +49,15 @@ namespace Qsu.AST.Expressions
 
             return builder.ToString();
         }
+        public string ToJavaScript()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append(Left.ToJavaScript());
+            builder.Append(Operator);
+            builder.Append(Right.ToJavaScript());
+
+            return builder.ToString();
+        }
     }
 }

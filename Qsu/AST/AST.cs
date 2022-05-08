@@ -68,5 +68,17 @@ namespace Qsu.AST
 
             return builder.ToString();
         }
+
+        public string ToJavaScript()
+        {
+            var builder = new StringBuilder();
+
+            foreach (var item in Statements)
+            {
+                builder.Append(item.ToJavaScript());
+            }
+
+            return builder.ToString();
+        }
     }
 }

@@ -42,6 +42,7 @@ namespace Qsu
                     Console.WriteLine("JSON:    " + root.ToJSON());
                     Console.WriteLine("Csharp:    " + root.ToCsharp());
                     Console.WriteLine("Python:    " + root.ToPython());
+                    Console.WriteLine("JavaScript:    " + root.ToJavaScript());
                 }
             }
         }

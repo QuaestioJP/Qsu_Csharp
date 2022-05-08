@@ -56,5 +56,13 @@ namespace Qsu.AST.Statements
 
             return builder.ToString();
         }
+        public string ToJavaScript()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append($"let {Name.ToJavaScript()}={Value.ToJavaScript()};");
+
+            return builder.ToString();
+        }
     }
 }

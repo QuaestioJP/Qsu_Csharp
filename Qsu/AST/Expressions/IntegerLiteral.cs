@@ -24,12 +24,20 @@ namespace Qsu.AST.Expressions
         {
             var builder = new StringBuilder();
 
-            builder.Append(Value);
+            builder.Append(Value.ToString());
 
             return builder.ToString();
         }
 
         public string ToPython()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append(Value.ToString());
+
+            return builder.ToString();
+        }
+        public string ToJavaScript()
         {
             var builder = new StringBuilder();
 

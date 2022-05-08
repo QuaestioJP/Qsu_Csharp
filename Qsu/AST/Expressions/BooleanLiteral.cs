@@ -36,5 +36,13 @@ namespace Qsu.AST.Expressions
 
             return builder.ToString();
         }
+        public string ToJavaScript()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append(Value ? "true" : "false");
+
+            return builder.ToString();
+        }
     }
 }
