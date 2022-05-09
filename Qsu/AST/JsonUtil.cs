@@ -18,20 +18,30 @@ namespace Qsu.AST.ToJSON
 
             builder.Append("\"Param\":");
             builder.Append("{");
-            for (int i = 0; i < p.Length; i++)
-            {
 
-                builder.Append($"\"{p[i].Item1}\":{p[i].Item2}");
-                if (p.Length - 1 != i)
+            if (p.Length != 0)
+            {
+                for (int i = 0; i < p.Length; i++)
                 {
-                    builder.Append(",");
+
+                    builder.Append($"\"{p[i].Item1}\":{p[i].Item2}");
+                    if (p.Length - 1 != i)
+                    {
+                        builder.Append(",");
+                    }
                 }
             }
+
             builder.Append("}");
             
             builder.Append("}");
 
             return builder.ToString();
+        }
+
+        public static string ToJSON(string Name)
+        {
+            return ToJSON(Name, new (string, string)[0]);
         }
     }
 }

@@ -18,12 +18,18 @@ namespace Qsu.AST.Statements
 
         public string ToJSON()
         {
-
-            return JsonUtil.ToJSON("return",new (string, string)[] { 
+            if (Value == null)
+            {
+                return JsonUtil.ToJSON("return");
+            }
+            else
+            {
+                return JsonUtil.ToJSON("return", new (string, string)[] {
                 ("Value",Value.ToJSON())
                 //$"\"a\""
                 //Value.ToJSON
             });
+            }
         }
 
         public string ToCsharp()
@@ -32,7 +38,7 @@ namespace Qsu.AST.Statements
 
             builder.Append("return ");
 
-            builder.Append(Value.ToCsharp());
+            if (Value != null) builder.Append(Value.ToCsharp());
 
             builder.Append(";");
 
@@ -43,7 +49,7 @@ namespace Qsu.AST.Statements
             var builder = new StringBuilder();
 
             builder.Append("return ");
-            builder.Append(Value.ToPython());
+            if (Value != null) builder.Append(Value.ToPython());
 
             return builder.ToString();
         }
@@ -51,7 +57,9 @@ namespace Qsu.AST.Statements
         {
             var builder = new StringBuilder();
 
-            builder.Append($"return {Value.ToJavaScript()};");
+            builder.Append("return ");
+            if (Value != null) builder.Append(Value.ToJavaScript());
+            builder.Append(";");
 
             return builder.ToString();
         }

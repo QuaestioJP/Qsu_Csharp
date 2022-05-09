@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Wkj3wMDIbzkXBfCS2WqKbgOOye7dezVEOjz8pJ9aI5jr4N8bXwiNtXoz89uB28JbY4MiVgzzu3zbQ+MQQ5TdZQ==",
+  "dgSpecHash": "RBEGUkFiUo+fJNnlRWivQEXV32BfMlKJMTtHOEtPHONHGsfKorIGZBIugnaw+4yWvLnLfUZizSdU7PjCB+Eu0g==",
   "success": true,
   "projectFilePath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Qsu\\Qsu.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "キャッシュ ファイルの読み取りの問題 C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Qsu\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

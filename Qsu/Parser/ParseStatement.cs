@@ -68,10 +68,13 @@ namespace Qsu.Parsing
             ReadToken();
 
             //式
-            statement.Value = ParseExpression(Precedence.LOWEST);
+            if (CurrentToken.Type != TokenType.SEMICOLON)
+            {
+                statement.Value = ParseExpression(Precedence.LOWEST);
 
-            //セミコロン
-            if (NextToken.Type != TokenType.SEMICOLON) return null;
+                //セミコロン
+                if (NextToken.Type != TokenType.SEMICOLON) return null;
+            }
 
             ReadToken();
 
