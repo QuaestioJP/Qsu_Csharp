@@ -27,8 +27,13 @@ namespace Qsu.Parsing
                 case TokenType.WHILE:
                     return ParseWhileStatement();
                 default:
-                    Errors.Add("未定義の構文が使用されました。");
-                    return null;
+                    IStatement pes = ParseExpressionStatement();
+                    if (pes == null)
+                    {
+                        Errors.Add("未定義の構文が使用されました。");
+                    }
+
+                    return pes;
             }
         }
 
@@ -166,6 +171,20 @@ namespace Qsu.Parsing
             //ブロック解析
             statement.Block = ParseBlockStatement();
 
+
+            return statement;
+        }
+
+        public ExpressionStatement ParseExpressionStatement()
+        {
+            var statement = new ExpressionStatement();
+            statement.Token = CurrentToken;
+
+            statement.Expression = ParseExpression(Precedence.LOWEST);
+
+            if (NextToken.Type != TokenType.SEMICOLON) return null;
+
+            ReadToken();
 
             return statement;
         }

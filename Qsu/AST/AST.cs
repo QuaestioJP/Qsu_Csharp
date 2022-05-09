@@ -49,17 +49,19 @@ namespace Qsu.AST
             }
 
             builder.Append("}");
+            builder.Append("public void QsuUtility_ExpressionStatement(object expression){}");
 
             builder.Append("}");
 
             builder.Append("}");
-
             return builder.ToString();
         }
 
         public string ToPython()
         {
             var builder = new StringBuilder();
+
+            builder.Append("def QsuUtility_ExpressionStatement(expression):\n    pass\n");
 
             foreach (var item in Statements)
             {
@@ -72,6 +74,8 @@ namespace Qsu.AST
         public string ToJavaScript()
         {
             var builder = new StringBuilder();
+
+            builder.Append("function QsuUtility_ExpressionStatement(expression){;}");
 
             foreach (var item in Statements)
             {
