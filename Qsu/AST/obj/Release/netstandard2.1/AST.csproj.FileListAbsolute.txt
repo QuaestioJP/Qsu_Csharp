@@ -24,3 +24,16 @@ C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\AST\obj\Release\netstandard2
 C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\AST\obj\Release\netstandard2.1\AST.csproj.CopyComplete
 C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\AST\obj\Release\netstandard2.1\AST.dll
 C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\AST\obj\Release\netstandard2.1\AST.pdb
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\AST\bin\Release\netstandard2.1\AST.deps.json
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\AST\bin\Release\netstandard2.1\AST.dll
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\AST\bin\Release\netstandard2.1\AST.pdb
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\AST\bin\Release\netstandard2.1\Lexer.dll
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\AST\bin\Release\netstandard2.1\Lexer.pdb
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\AST\obj\Release\netstandard2.1\AST.csproj.AssemblyReference.cache
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\AST\obj\Release\netstandard2.1\AST.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\AST\obj\Release\netstandard2.1\AST.AssemblyInfoInputs.cache
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\AST\obj\Release\netstandard2.1\AST.AssemblyInfo.cs
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\AST\obj\Release\netstandard2.1\AST.csproj.CoreCompileInputs.cache
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\AST\obj\Release\netstandard2.1\AST.csproj.CopyComplete
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\AST\obj\Release\netstandard2.1\AST.dll
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\AST\obj\Release\netstandard2.1\AST.pdb

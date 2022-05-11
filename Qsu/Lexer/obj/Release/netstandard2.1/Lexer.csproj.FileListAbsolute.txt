@@ -18,3 +18,13 @@ C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\obj\Release\netstandar
 C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\obj\Release\netstandard2.1\Lexer.csproj.CoreCompileInputs.cache
 C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\obj\Release\netstandard2.1\Lexer.dll
 C:\Users\KurisuJuha\Documents\GitHub\Qsu_Csharp\Qsu\Lexer\obj\Release\netstandard2.1\Lexer.pdb
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\Lexer\bin\Release\netstandard2.1\Lexer.deps.json
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\Lexer\bin\Release\netstandard2.1\Lexer.dll
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\Lexer\bin\Release\netstandard2.1\Lexer.pdb
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\Lexer\obj\Release\netstandard2.1\Lexer.csproj.AssemblyReference.cache
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\Lexer\obj\Release\netstandard2.1\Lexer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\Lexer\obj\Release\netstandard2.1\Lexer.AssemblyInfoInputs.cache
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\Lexer\obj\Release\netstandard2.1\Lexer.AssemblyInfo.cs
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\Lexer\obj\Release\netstandard2.1\Lexer.csproj.CoreCompileInputs.cache
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\Lexer\obj\Release\netstandard2.1\Lexer.dll
+C:\Users\理史\Downloads\Qsu_Csharp-main\Qsu_Csharp-main\Qsu\Lexer\obj\Release\netstandard2.1\Lexer.pdb

@@ -65,28 +65,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\KurisuJuha\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\理史\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Transpiler\\Transpiler.csproj",
+      "projectUniqueName": "C:\\Users\\理史\\source\\repos\\Qsu\\Transpiler\\Transpiler.csproj",
       "projectName": "Transpiler",
-      "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Transpiler\\Transpiler.csproj",
-      "packagesPath": "C:\\Users\\KurisuJuha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Transpiler\\obj\\",
+      "projectPath": "C:\\Users\\理史\\source\\repos\\Qsu\\Transpiler\\Transpiler.csproj",
+      "packagesPath": "C:\\Users\\理史\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\理史\\source\\repos\\Qsu\\Transpiler\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\KurisuJuha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\理史\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -99,11 +91,11 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj": {
-              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Lexer\\Lexer.csproj"
+            "C:\\Users\\理史\\source\\repos\\Qsu\\Lexer\\Lexer.csproj": {
+              "projectPath": "C:\\Users\\理史\\source\\repos\\Qsu\\Lexer\\Lexer.csproj"
             },
-            "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj": {
-              "projectPath": "C:\\Users\\KurisuJuha\\Documents\\GitHub\\Qsu_Csharp\\Qsu\\Parser\\Parser.csproj"
+            "C:\\Users\\理史\\source\\repos\\Qsu\\Parser\\Parser.csproj": {
+              "projectPath": "C:\\Users\\理史\\source\\repos\\Qsu\\Parser\\Parser.csproj"
             }
           }
         }
@@ -132,7 +124,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
