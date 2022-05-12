@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lA3ZIxe0ZY11YFzsWIOgOGSWhVKsk8eb4e0D298nXZJZRlqM2qQCmdQyxmt20deFGl3NrgcVlXkCWkQ1bihaOQ==",
+  "dgSpecHash": "jgdrRsnJjF+6xAD1lIl28iH4pWrQorp5rP1897GUeuJcEhMhj0njsH0MGPJL6uZ3TWdwGeKSZyxrxljywvC9kg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\理史\\source\\repos\\Qsu\\Lexer\\Lexer.csproj",
+  "projectFilePath": "C:\\github\\Qsu_pro\\Qsu\\Lexer\\Lexer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

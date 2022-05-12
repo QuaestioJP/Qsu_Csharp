@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\理史\\source\\repos\\Qsu\\Lexer\\Lexer.csproj",
+      "projectUniqueName": "C:\\github\\Qsu_pro\\Qsu\\Lexer\\Lexer.csproj",
       "projectName": "Lexer",
-      "projectPath": "C:\\Users\\理史\\source\\repos\\Qsu\\Lexer\\Lexer.csproj",
+      "projectPath": "C:\\github\\Qsu_pro\\Qsu\\Lexer\\Lexer.csproj",
       "packagesPath": "C:\\Users\\理史\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\理史\\source\\repos\\Qsu\\Lexer\\obj\\",
+      "outputPath": "C:\\github\\Qsu_pro\\Qsu\\Lexer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\理史\\AppData\\Roaming\\NuGet\\NuGet.Config",

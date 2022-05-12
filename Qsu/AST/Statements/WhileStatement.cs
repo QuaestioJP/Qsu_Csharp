@@ -56,5 +56,31 @@ namespace Qsu.AST.Statements
 
             return builder.ToString();
         }
+
+        public string ToJava()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("while");
+            builder.Append("(");
+            builder.Append(Condition.ToJava());
+            builder.Append(")");
+            builder.Append(Block.ToJava());
+
+            return builder.ToString();
+        }
+
+        public string ToClang()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("while");
+            builder.Append("(");
+            builder.Append(Condition.ToClang());
+            builder.Append(")");
+            builder.Append(Block.ToClang());
+
+            return builder.ToString();
+        }
     }
 }

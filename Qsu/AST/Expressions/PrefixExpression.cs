@@ -52,5 +52,27 @@ namespace Qsu.AST.Expressions
 
             return builder.ToString();
         }
+
+        public string ToJava()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append(Operator);
+
+            builder.Append(Right.ToCsharp());
+
+            return builder.ToString();
+        }
+
+        public string ToClang()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append(Operator);
+
+            builder.Append(Right.ToClang());
+
+            return builder.ToString();
+        }
     }
 }

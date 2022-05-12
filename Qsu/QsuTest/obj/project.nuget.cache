@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WG6jPqelfw1AXy4wJfjaqCRCg0ewWMW4rgxmFoFb+3YsxE47BW5ksXrT6Qb9wl/Y+Wxm22Vlue4LoAiEoOwpWg==",
+  "dgSpecHash": "CB0BDh3Spkt6G9YQ5TvnA42qpWpNS5XZNknR/RVemN+DdSmte5oRckHTfVOkQWlo5uS7Z1hE0JdIMO9Zr1g4OA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\理史\\source\\repos\\Qsu\\QsuTest\\QsuTest.csproj",
+  "projectFilePath": "C:\\github\\Qsu_pro\\Qsu\\QsuTest\\QsuTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\理史\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\理史\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",

@@ -70,11 +70,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\理史\\source\\repos\\Qsu\\Transpiler\\Transpiler.csproj",
+      "projectUniqueName": "C:\\github\\Qsu_pro\\Qsu\\Transpiler\\Transpiler.csproj",
       "projectName": "Transpiler",
-      "projectPath": "C:\\Users\\理史\\source\\repos\\Qsu\\Transpiler\\Transpiler.csproj",
+      "projectPath": "C:\\github\\Qsu_pro\\Qsu\\Transpiler\\Transpiler.csproj",
       "packagesPath": "C:\\Users\\理史\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\理史\\source\\repos\\Qsu\\Transpiler\\obj\\",
+      "outputPath": "C:\\github\\Qsu_pro\\Qsu\\Transpiler\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\理史\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -91,11 +91,11 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\理史\\source\\repos\\Qsu\\Lexer\\Lexer.csproj": {
-              "projectPath": "C:\\Users\\理史\\source\\repos\\Qsu\\Lexer\\Lexer.csproj"
+            "C:\\github\\Qsu_pro\\Qsu\\Lexer\\Lexer.csproj": {
+              "projectPath": "C:\\github\\Qsu_pro\\Qsu\\Lexer\\Lexer.csproj"
             },
-            "C:\\Users\\理史\\source\\repos\\Qsu\\Parser\\Parser.csproj": {
-              "projectPath": "C:\\Users\\理史\\source\\repos\\Qsu\\Parser\\Parser.csproj"
+            "C:\\github\\Qsu_pro\\Qsu\\Parser\\Parser.csproj": {
+              "projectPath": "C:\\github\\Qsu_pro\\Qsu\\Parser\\Parser.csproj"
             }
           }
         }

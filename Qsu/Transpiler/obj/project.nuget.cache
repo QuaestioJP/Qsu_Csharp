@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z7fI93H5Le9/feCvavFZFt9Xl4ZTZvQUAWN1jbFbPmEK33GfkWkbX7x68V+HKTD5y7c8bh6xRCgGVgw+ImBLNw==",
+  "dgSpecHash": "7Q5SxQNRqjDXLceX49zanEMg20H7S6OsDvS7U+nGiJ1SoJ+NjjgAJdlUWvZQXqMq7StpszUP3CIZS5o2sjCj4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\理史\\source\\repos\\Qsu\\Transpiler\\Transpiler.csproj",
+  "projectFilePath": "C:\\github\\Qsu_pro\\Qsu\\Transpiler\\Transpiler.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

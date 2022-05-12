@@ -35,5 +35,15 @@ namespace Qsu.AST.Statements
         {
             return $"QsuUtility_ExpressionStatement({Expression.ToPython()})";
         }
+
+        public string ToJava()
+        {
+            return $"QsuUtility_ExpressionStatement({Expression.ToJava()});";
+        }
+
+        public string ToClang()
+        {
+            return $"QsuUtility_ExpressionStatement({Expression.ToJava()});";
+        }
     }
 }

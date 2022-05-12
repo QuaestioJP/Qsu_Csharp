@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QxTlHr4t9ik3Lw9u9IWqJhkLsQlgG8UWSR48QIhwp0RDazwHniyobh5jmkjhXMPO9xJpJXGvkpCO+6ix/nA6zg==",
+  "dgSpecHash": "sjI2+dArbPAPNSrtnnZ63otJnR0YR3dvCHiwctp9f5N2dsq1VFDhjEEH13TCTUBomX2nRUw0mR9XZ/WyPutw5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\理史\\source\\repos\\Qsu\\Parser\\Parser.csproj",
+  "projectFilePath": "C:\\github\\Qsu_pro\\Qsu\\Parser\\Parser.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

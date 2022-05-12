@@ -16,6 +16,10 @@ namespace Qsu.AST
         public string ToPython();
 
         public string ToJavaScript();
+
+        public string ToJava();
+
+        public string ToClang();
     }
 
     /// <summary>

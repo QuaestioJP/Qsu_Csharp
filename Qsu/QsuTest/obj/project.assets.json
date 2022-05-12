@@ -6174,11 +6174,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\理史\\source\\repos\\Qsu\\QsuTest\\QsuTest.csproj",
+      "projectUniqueName": "C:\\github\\Qsu_pro\\Qsu\\QsuTest\\QsuTest.csproj",
       "projectName": "QsuTest",
-      "projectPath": "C:\\Users\\理史\\source\\repos\\Qsu\\QsuTest\\QsuTest.csproj",
+      "projectPath": "C:\\github\\Qsu_pro\\Qsu\\QsuTest\\QsuTest.csproj",
       "packagesPath": "C:\\Users\\理史\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\理史\\source\\repos\\Qsu\\QsuTest\\obj\\",
+      "outputPath": "C:\\github\\Qsu_pro\\Qsu\\QsuTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\理史\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6195,14 +6195,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\理史\\source\\repos\\Qsu\\AST\\AST.csproj": {
-              "projectPath": "C:\\Users\\理史\\source\\repos\\Qsu\\AST\\AST.csproj"
+            "C:\\github\\Qsu_pro\\Qsu\\AST\\AST.csproj": {
+              "projectPath": "C:\\github\\Qsu_pro\\Qsu\\AST\\AST.csproj"
             },
-            "C:\\Users\\理史\\source\\repos\\Qsu\\Lexer\\Lexer.csproj": {
-              "projectPath": "C:\\Users\\理史\\source\\repos\\Qsu\\Lexer\\Lexer.csproj"
+            "C:\\github\\Qsu_pro\\Qsu\\Lexer\\Lexer.csproj": {
+              "projectPath": "C:\\github\\Qsu_pro\\Qsu\\Lexer\\Lexer.csproj"
             },
-            "C:\\Users\\理史\\source\\repos\\Qsu\\Parser\\Parser.csproj": {
-              "projectPath": "C:\\Users\\理史\\source\\repos\\Qsu\\Parser\\Parser.csproj"
+            "C:\\github\\Qsu_pro\\Qsu\\Parser\\Parser.csproj": {
+              "projectPath": "C:\\github\\Qsu_pro\\Qsu\\Parser\\Parser.csproj"
             }
           }
         }

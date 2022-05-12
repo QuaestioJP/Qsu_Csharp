@@ -84,5 +84,50 @@ namespace Qsu.AST
 
             return builder.ToString();
         }
+
+        public string ToJava()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("public class Program");
+            builder.Append("{");
+
+            builder.Append("public static void main(String[] args)");
+            builder.Append("{");
+
+            foreach (var item in Statements)
+            {
+                builder.Append(item.ToJava());
+            }
+
+            builder.Append("}");
+            builder.Append("public void QsuUtility_ExpressionStatement(Object expression){}");
+
+            builder.Append("}");
+
+            return builder.ToString();
+        }
+
+        public string ToClang()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("#include<stdio.h>");
+
+            builder.Append("void main(int argc, char *argv[])");
+            builder.Append("{");
+
+            foreach (var item in Statements)
+            {
+                builder.Append(item.ToClang());
+            }
+
+            builder.Append("}");
+
+            //これの用途と型の判別方法が分かったら変更する
+            builder.Append("void QsuUtility_ExpressionStatement(int expression){}");
+
+            return builder.ToString();
+        }
     }
 }

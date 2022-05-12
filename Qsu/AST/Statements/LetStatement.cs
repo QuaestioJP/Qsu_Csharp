@@ -64,5 +64,43 @@ namespace Qsu.AST.Statements
 
             return builder.ToString();
         }
+
+        public string ToJava()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("var ");
+
+            builder.Append(Name.ToJava());
+
+            builder.Append(" = ");
+
+            builder.Append(Value.ToJava());
+
+            builder.Append(";");
+
+            return builder.ToString();
+        }
+
+        public string ToClang()
+        {
+            var builder = new StringBuilder();
+
+            //仮にintをつけておく (型の判別方法が分かったら直す)
+            //本当は値の型によってcharとかfloatとかしたい
+            //lexerに他の型が追加されたら直すとします
+
+            builder.Append("int ");
+
+            builder.Append(Name.ToClang());
+
+            builder.Append(" = ");
+
+            builder.Append(Value.ToClang());
+
+            builder.Append(";");
+
+            return builder.ToString();
+        }
     }
 }

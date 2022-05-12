@@ -87,5 +87,43 @@ namespace Qsu.AST.Statements
 
             return builder.ToString();
         }
+
+        public string ToJava()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append("if");
+            builder.Append("(");
+            builder.Append(Condition.ToJava());
+            builder.Append(")");
+            builder.Append("{");
+            builder.Append(Consequence.ToJava());
+            builder.Append("}");
+            if (Alternative != null)
+            {
+                builder.Append("else");
+                builder.Append("{");
+                builder.Append(Alternative.ToJava());
+                builder.Append("}");
+            }
+
+            return builder.ToString();
+        }
+
+        public string ToClang()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append($"if({Condition.ToClang()})");
+            builder.Append(Consequence.ToClang());
+
+            if (Alternative != null)
+            {
+                builder.Append($"else{Alternative.ToClang()}");
+            }
+
+            return builder.ToString();
+        }
+
     }
-}
+    }

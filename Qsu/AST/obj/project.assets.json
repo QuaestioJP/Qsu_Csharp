@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\理史\\source\\repos\\Qsu\\AST\\AST.csproj",
+      "projectUniqueName": "C:\\github\\Qsu_pro\\Qsu\\AST\\AST.csproj",
       "projectName": "AST",
-      "projectPath": "C:\\Users\\理史\\source\\repos\\Qsu\\AST\\AST.csproj",
+      "projectPath": "C:\\github\\Qsu_pro\\Qsu\\AST\\AST.csproj",
       "packagesPath": "C:\\Users\\理史\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\理史\\source\\repos\\Qsu\\AST\\obj\\",
+      "outputPath": "C:\\github\\Qsu_pro\\Qsu\\AST\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\理史\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\理史\\source\\repos\\Qsu\\Lexer\\Lexer.csproj": {
-              "projectPath": "C:\\Users\\理史\\source\\repos\\Qsu\\Lexer\\Lexer.csproj"
+            "C:\\github\\Qsu_pro\\Qsu\\Lexer\\Lexer.csproj": {
+              "projectPath": "C:\\github\\Qsu_pro\\Qsu\\Lexer\\Lexer.csproj"
             }
           }
         }
